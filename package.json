@@ -1,0 +1,14 @@
+{
+  "name": "jean-pierre14",
+  "version": "1.0.0",
+  "description": "Simple portfolio of Grace El BISIMWA, this week we'll done it",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "keywords": [
+    "1234"
+  ],
+  "author": "Jean-pierre14",
+  "license": "MIT"
+}
