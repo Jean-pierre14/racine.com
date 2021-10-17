@@ -125,4 +125,9 @@
         position: relative;
         display: block;
     }
+    .main{
+        position: relative;
+        display: block;
+        width: 100%;
+    }
 }
