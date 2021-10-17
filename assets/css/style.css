@@ -123,6 +123,6 @@
     }
     .topBar-Left{
         position: relative;
-        display: ;
+        display: block;
     }
 }
