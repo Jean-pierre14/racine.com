@@ -10,5 +10,9 @@
     "1234"
   ],
   "author": "Jean-pierre14",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
 }
