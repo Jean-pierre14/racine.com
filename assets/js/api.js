@@ -5,8 +5,9 @@ fetch("https://instagram47.p.rapidapi.com/public_post_likers?shortcode=CHLXcX-h-
 		"x-rapidapi-key": "7ffe277cf5mshcf4db704601812ep1cc290jsn1d5ef023e30b"
 	}
 })
-.then(response => {
-	console.log(response);
+.then((res)=> res.json())
+.then((data)=>{
+    console.log(data)
 })
 .catch(err => {
 	console.error(err);
