@@ -1,14 +1,13 @@
-fetch("https://instagram47.p.rapidapi.com/public_post_likers?shortcode=CHLXcX-h-Px", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "instagram47.p.rapidapi.com",
-		"x-rapidapi-key": "7ffe277cf5mshcf4db704601812ep1cc290jsn1d5ef023e30b"
-	}
-})
-.then((res)=> res.json())
-.then((data)=>{
-    console.log(data)
-})
+let output = ''
+fetch('https://jsonplaceholder.typicode.com/todos')
+  .then(res => res.json())
+  .then(data => {
+      if(data.ok){
+          console.log(`Fake data`)
+      }else{
+          console.log('Zero')
+      }
+  })
 .catch(err => {
 	console.error(err);
 });
