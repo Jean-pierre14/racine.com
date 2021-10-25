@@ -5,6 +5,10 @@
 
     font-family: calibri, !important;
 }
+.padding-5{
+    position: relative;
+    padding: 10px;
+}
 
 .Navbar{
     position: sticky;
@@ -117,7 +121,7 @@
     width: 100%;
     overflow: hidden;
     border-radius: 16px;
-    margin: 5px 0;
+    margin-bottom: 15px;
     box-shadow: 0 0px 5px rgba(0, 0, 0, 0.384);
 }
 .Card-Header,.Card-Footer{
