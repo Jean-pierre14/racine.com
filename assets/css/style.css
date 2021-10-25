@@ -125,6 +125,10 @@
     padding: 10px;
     background-color: #fff;
 }
+.Card-Footer{
+    display: flex;
+    justify-content: space-between;
+}
 .Content-img{
     position: relative;
     width: 100%;
