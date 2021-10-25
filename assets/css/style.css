@@ -109,7 +109,30 @@
     overflow-y: auto;
 }
 .Side-Center{
+    position: relative;
     flex: 5.5;
+}
+.Card{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 16px;
+    margin: 5px 0;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.384);
+}
+.Card-Header,.Card-Footer{
+    position: relative;
+    padding: 10px;
+    background-color: #fff;
+}
+.Content-img{
+    position: relative;
+    width: 100%;
+    height: 250px;
+}
+.Img{
+    position: relative;
+    width: 100%;
 }
 .Side-Right{
     flex: 3.5;
