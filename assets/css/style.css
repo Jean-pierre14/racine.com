@@ -179,7 +179,7 @@
         left: 0;
         width: 230px;
         height: calc(100vh - 100px);
-        background: cornflowerblue;
+        background: rgb(42, 76, 140);
     }
     .topBar-Right .list{
         z-index: 99;
@@ -196,12 +196,22 @@
         /* height: calc(100vh - 100px); */
     }
     .topBar-Right .list li a{
+        position: relative;
         display: block;
         text-align: left;
+        font-family: calibri !important;
+        font-size: 16px;
+        font-weight: 300;
         margin: 5px 0;
         padding: 10px;
         height: 35px;
         background-color: royalblue;
+        z-index: 999;
+    }
+    .topBar-Right .img-profil{
+        position: absolute;
+        top: 5px;
+        right: 10px;
     }
     .topBar-Left{
         position: relative;
