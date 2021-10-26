@@ -222,4 +222,7 @@
         display: block;
         width: 100%;
     }
+    .Side-Right, .Side-Left{
+        display: none;
+    }
 }
