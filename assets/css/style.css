@@ -92,7 +92,7 @@
     padding: 0 10px 0 10px;
 }
 
-.topBar-Right .img-profil{
+.img-profil{
     position: relative;
     width: 42px;
     height: 42px;
@@ -108,10 +108,22 @@
 }
 
 .Side-Left{
+    position: relative;
+    width: 100%;
     flex: 3;
     height: calc(100vh - 50px);
     overflow-y: auto;
 }
+.Search-Box{
+    position: relative;
+    background-color: rgb(99, 121, 161);
+    display: block;
+    padding: 20px;
+    margin: 0 10px;
+
+    border-radius: 16px;
+}
+
 .Side-Center{
     position: relative;
     flex: 5.5;
@@ -144,6 +156,30 @@
 }
 .Side-Right{
     flex: 3.5;
+}
+
+
+.Gr-List{
+    position: relative;
+    list-style: none;
+}
+.Gr-List li a{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 15px;
+    margin: 5px 10px;
+    border-radius: 16px;
+
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+
+    background-color:rgb(99, 121, 161);
+}
+.Gr-List li a span{
+    font-weight: 500;
 }
 
 @media(max-width: 750px){
