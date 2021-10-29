@@ -148,16 +148,33 @@
     overflow: hidden;
     border-radius: 16px;
     margin-bottom: 15px;
-    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.384);
+    box-shadow: 0 0px 5px rgba(97, 71, 71, 0.384);
+    font-family: roboto !important;
 }
 .Card-Header,.Card-Footer{
     position: relative;
-    padding: 10px;
+    padding: 20px;
     background-color: #fff;
 }
 .Card-Footer{
     display: flex;
     justify-content: space-between;
+    /* padding: 20px; */
+}
+.Card-Footer span i{
+    position: relative;
+    cursor: pointer;
+    /* justify-content: center; */
+    /* align-items: center; */
+    color: #fff;
+    background: rgb(42, 76, 140);
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.Card-Footer span i:hover{
+    color: #fff;
+    background-color: rgba(42, 76, 140, 0.466);
 }
 .Content-img{
     position: relative;
