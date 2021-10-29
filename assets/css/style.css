@@ -123,6 +123,19 @@
 
     border-radius: 16px;
 }
+.search-form{
+    position: relative;
+    outline: none !important;
+    padding: 15px;
+    width: 100%;
+    border: 1px solid rgb(70, 70, 70);
+    border-radius: 15px;
+
+    background-color: rgba(255, 255, 255, 0.562);
+    font-family: roboto, calibri !important;
+    font-size: 20px;
+    font-weight: 600;
+}
 
 .Side-Center{
     position: relative;
