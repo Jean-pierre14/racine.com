@@ -187,6 +187,8 @@
 }
 .Side-Right{
     flex: 3.5;
+    position:relative;
+    padding: 10px;
 }
 
 
