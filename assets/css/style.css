@@ -10,6 +10,10 @@
     padding: 10px;
 }
 
+.margin-top-2{
+    margin-top: 20px;
+}
+
 .Navbar{
     position: sticky;
     top: 0;
@@ -225,6 +229,13 @@
     font-weight: 500;
 }
 
+@media(max-width: 600){
+    .Navbar{
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+}
 @media(max-width: 750px){
     .Navbar{
 
