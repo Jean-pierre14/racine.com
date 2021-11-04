@@ -185,6 +185,16 @@
     position: relative;
     width: 100%;
 }
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background-color: #fff;
+}
+::-webkit-scrollbar-thumb{
+    background-color: grey;
+}
 .Side-Right{
     flex: 3.5;
     position:relative;
