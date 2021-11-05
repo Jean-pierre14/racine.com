@@ -262,7 +262,7 @@
     .topBar-Center{
         position: fixed;
         top: 50px;
-        left: 0;
+        left: -230px;
         width: 230px;
         /* height: 45px; */
         padding: 10px;

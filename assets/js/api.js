@@ -1,9 +1,17 @@
-let output = ''
+let output = '';
+const paragraph = document.getElementById('datas');
+paragraph.innerHTML = 'Loading...';
+console.log('Loading...')
 fetch('https://jsonplaceholder.typicode.com/todos')
-  .then(res => res.json())
-  .then(data => {
-      console.log(data)
+  .then(response => response.json())
+  .then(json => {
+    if (json.length > 0) {
+      console.log(JSON.stringify(json))
+      json.forEach((u) => {
+
+        paragraph.innerHTML = `${u.userId}`
+      })
+    } else {
+      console.log('No data')
+    }
   })
-.catch(err => {
-	console.error(err);
-});
