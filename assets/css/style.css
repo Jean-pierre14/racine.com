@@ -9,9 +9,25 @@
     position: relative;
     padding: 10px;
 }
+.padding-20{
+    position: relative;
+    padding: 20px;
+}
 
 .margin-top-2{
     margin-top: 20px;
+}
+
+.flex{
+    display: flex;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.list-items{
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
 }
 
 .button{
@@ -168,6 +184,9 @@
     margin-bottom: 15px;
     box-shadow: 0 0px 5px rgba(97, 71, 71, 0.384);
     font-family: roboto !important;
+}
+.Card-Header{
+    border-bottom: 1px solid grey;
 }
 .Card-Header,.Card-Footer{
     position: relative;

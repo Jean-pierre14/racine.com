@@ -85,12 +85,19 @@
                 </ul>
             </div>
             <div class="Side-Center">
-
-
+                <div id="Datas-user">
+                    <input type="hidden" name="id" id="Datas" value="" placeholder="">
+                    <p>Loading...</p>
+                </div>
             </div>
             <div class="Side-Right">
                 <div class="Side-Right-Wrapper">
-                    <h3>His/her informations</h3>
+                    <div id="Datas-user-Details">
+                        <h3>His/her informations</h3>
+                    </div>
+                    <div id="map" style="width: 100%; height: 250px">
+                        <h3>Map</h3>
+                    </div>
                 </div>
             </div>
         </div>
@@ -118,6 +125,19 @@
         </div>
     </div>
 </body>
+
+<script>
+    function initMap() {
+        const mapOptions = {
+            center: { lat: -68.6102, lng: -47.0653 },
+            zoom: 8
+        };
+        const map = new google.maps.Map(document.getElementById('map', mapOptions))
+    }
+
+</script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfsrBR4BN3ZknC21eDw2yrDHkJBk0gaMM&callback=initMap"></script>
 <script src="./assets/js/api.js"></script>
 
 </html>
