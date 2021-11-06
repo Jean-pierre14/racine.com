@@ -14,6 +14,19 @@
     margin-top: 20px;
 }
 
+.button{
+    position: relative;
+    padding: 10px 15px;
+    border: none !important;
+    outline: none !important;
+    border-radius: 5px;
+    background-color: #ccc;
+    cursor: pointer;
+}
+.button:hover{
+    opacity: .9;
+}
+
 .Navbar{
     position: sticky;
     top: 0;

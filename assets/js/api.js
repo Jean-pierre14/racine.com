@@ -10,15 +10,15 @@ fetch('https://jsonplaceholder.typicode.com/todos')
       let output = ''
       json.forEach((u) => {
         output += `
-        <div class="card my-2">
-          <div class="card-header">
-            <h3 class="d-flex justify-content-between">Username <a>${u.id}</a></h3>
+        <div class="Card">
+          <div class="Card-Header">
+            <h3 class="d-flex justify-content-between">Username <a href="#${u.userId}">${u.id}</a></h3>
           </div>
-          <div class="card-body">
+          <div class="Card-Body padding-5">
             <p>${u.title}</p>
           </div>
-          <div class="card-footer">
-            <button type="button" class="btn btn-success">${u.completed}</button>
+          <div class="Card-Footer">
+            <button type="button" class="button btn btn-success">${u.completed}</button>
           </div>
         </div>
         `
