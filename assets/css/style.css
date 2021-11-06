@@ -158,6 +158,7 @@
 .Side-Center{
     position: relative;
     flex: 5.5;
+    padding: 10px;
 }
 .Card{
     position: relative;
@@ -226,7 +227,7 @@
 .Gr-List li a{
     position: relative;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 10px 15px;
     margin: 5px 10px;
