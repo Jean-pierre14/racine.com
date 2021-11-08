@@ -30,6 +30,45 @@
     padding: 10px 0;
 }
 
+.Img-fluid{
+    position: relative;
+    width: 100%;
+}
+.profil-img{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.panel{
+    position: relative;
+    width: 100%;
+    font-family: calibri !important;
+    font-weight: 500;
+    margin: 10px 0;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: -1px -1px 13px -4px rgba(0,0,0,0.3);
+    -webkit-box-shadow: -1px -1px 13px -4px rgba(0,0,0,0.3);
+    -moz-box-shadow: -1px -1px 13px -4px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: all 0.3s ease
+}
+
+.panel:hover{
+    box-shadow: -1px -1px 13px -4px rgba(0,0,0,0.54);
+    -webkit-box-shadow: -1px -1px 13px -4px rgba(0,0,0,0.54);
+    -moz-box-shadow: -1px -1px 13px -4px rgba(0,0,0,0.54);
+}
+
+.panel-Header,
+.panel-Body,.panel-Footer{
+    position: relative;
+    padding: 10px;
+}
+
+
 .button{
     position: relative;
     padding: 10px 15px;

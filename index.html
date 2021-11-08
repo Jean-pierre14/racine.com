@@ -199,6 +199,7 @@
             <div class="Side-Right">
                 <div class="Side-Right-Wrapper">
                     <div id="map"></div>
+                    <div id="Datas-comments"></div>
                 </div>
             </div>
         </div>
@@ -235,6 +236,45 @@
         }
         const map = google.maps.Map(document.getElementById('map'), options)
     }
+    function Comments() {
+        let output = 'Loading...'
+        fetch('https://jsonplaceholder.typicode.com/comments')
+            .then(res => res.json())
+            .then(data => {
+                if (data.length > 0) {
+                    output = ''
+                    data.forEach(item => {
+                        output += `
+                            <div class="panel">
+                                <div class="panel-Header">
+                                    <div class="flex justify-content-between">
+                                        <div>
+                                            <img src="./assets/img/racine14.jpg" class="profil-img"/>
+                                        </div>
+                                        <div>
+                                            <h3>${item.name}</h3>
+                                            <small>${item.email}</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-Body">
+                                    <p>${item.body}</p>    
+                                </div>
+                                <div class="panel-Footer">
+                                    <p>UserPost ${item.postId}</p>  
+                                </div>
+                            </div>
+                        `
+                    })
+                } else {
+                    alert("No data")
+                }
+                document.getElementById('Datas-comments').innerHTML = output
+            })
+            .catch(e => console.log(e))
+    }
+    Comments()
+
 </script>
 <script src="./assets/js/api.js"></script>
 <script async defer
