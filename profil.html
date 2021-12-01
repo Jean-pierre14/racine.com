@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jean-Pierre14</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="shortcut icon" href="./assets/img/racine14.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <nav class="Navbar">
+        <div class="topBar-Left">
+            <a href="index.html" class="logo">Jean-Pierre14</a>
+        </div>
+        <div class="topBar-Center">
+            <div class="input-group">
+                <label for="search">
+                    <i class="fas fa-search"></i>
+                </label>
+                <input type="text" autocomplete="off" id="search" class="input" placeholder="Search...">
+            </div>
+        </div>
+        <div class="topBar-Right">
+            <ul class="list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="moncv.html">My C.V</a></li>
+                <li><a href="me.html" class="active">About me</a></li>
+            </ul>
+            <img src="./assets/img/racine14.jpg" alt="Profi img" class="img-profil">
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col12">
+                    <div class="Card">
+                        <div class="Card-Header">
+                            <h2>CHIRUZA BISIMWA Grace</h2>
+                        </div>
+                        <div class="Card-Body">
+                            <h3 class="title-bg"><i class="fa fa-user icon-u"></i> Identifications</h3>
+                            <div class="padding-20">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad accusantium perferendis molestias cum illo placeat vero molestiae voluptate nostrum? Eius, id enim. Repudiandae fugit, ab quia modi facere quos et?
+                            </div>
+                            <h3 class="title-bg">etudes faites</h3>
+                            <div class="padding-20">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, doloremque. Sunt quis aspernatur sequi non delectus dolorem praesentium, facere quaerat ipsam. Distinctio ducimus mollitia atque. Odit maxime aliquid ratione autem.
+                            </div>
+                            <h3 class="title-bg">Formations et diplomes</h3>
+                            <div class="padding-20">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam eligendi exercitationem possimus quia dolorum officiis? Provident error nam facilis voluptates impedit aliquid, tempora repudiandae eveniet inventore delectus id incidunt nisi!
+                                </p>
+                            </div>
+                            <h3 class="title-bg">Langues parler</h3>
+                            <div class="padding-20">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, facere! Atque, id quaerat eum deleniti natus aliquid minima corrupti molestiae itaque odio nisi facere laudantium, quo culpa iure harum explicabo?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="Card-Footer">
+                            <a href="#print" download class="button">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function initMap() {
+        const options = {
+            center: { lat: 1.9441, lng: 30.0619 },
+            zoom: 14
+        }
+        const map = google.maps.Map(document.getElementById('map'), options)
+    }
+    function Comments() {
+        let output = 'Loading...'
+        fetch('https://jsonplaceholder.typicode.com/comments')
+            .then(res => res.json())
+            .then(data => {
+                if (data.length > 0) {
+                    output = ''
+                    data.forEach(item => {
+                        output += `
+                            <div class="panel">
+                                <div class="panel-Header">
+                                    <div class="flex justify-content-between">
+                                        <div>
+                                            <img src="./assets/img/racine14.jpg" class="profil-img"/>
+                                        </div>
+                                        <div>
+                                            <h3>${item.name}</h3>
+                                            <small>${item.email}</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-Body">
+                                    <p>${item.body}</p>    
+                                </div>
+                                <div class="panel-Footer">
+                                    <p>UserPost ${item.postId}</p>  
+                                </div>
+                            </div>
+                        `
+                    })
+                } else {
+                    alert("No data")
+                }
+                document.getElementById('Datas-comments').innerHTML = output
+            })
+            .catch(e => console.log(e))
+    }
+    Comments()
+
+</script>
+<script src="./assets/js/api.js"></script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfsrBR4BN3ZknC21eDw2yrDHkJBk0gaMM&callback=initMap"></script>
+
+</html>
