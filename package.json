@@ -4,7 +4,8 @@
   "description": "Simple portfolio of Grace El BISIMWA, this week we'll done it",
   "main": "server.js",
   "scripts": {
-    "test": "npm start"
+    "io": "nodemon server",
+    "start": "npm start"
   },
   "keywords": [
     "1234"
