@@ -2,9 +2,11 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    text-decoration: none;
 
     font-family: calibri, !important;
 }
+
 .padding-5{
     position: relative;
     padding: 10px;
@@ -300,6 +302,32 @@
 }
 .Gr-List li a span{
     font-weight: 500;
+}
+
+.container-fluid{
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0 10px;
+}
+.container{
+    position: relative;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+.col12{
+    position: relative;
+    width: 100%;
+    margin: 10px;
+}
+
+.title-bg{
+    position: relative;
+    display: block;
+    background-color: rgb(38, 85, 156);
+    color: #fff;
+    padding: 10px
 }
 
 @media(max-width: 600){
