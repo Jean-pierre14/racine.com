@@ -15,6 +15,9 @@
     position: relative;
     padding: 20px;
 }
+.padding-y-20{
+    padding: 20px 0;
+}
 
 .margin-top-2{
     margin-top: 20px;
