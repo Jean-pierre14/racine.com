@@ -41,37 +41,32 @@
             <img src="./assets/img/racine14.jpg" alt="Profi img" class="img-profil">
         </div>
     </nav>
-    <div class="container-fluid">
-        <div class="container">
-            <div class="Card">
-                <div class="Card-Header">
-                    <h3>Chartjs</h3>
-                </div>
-                <div class="Card-Body padding-20">
-                    <canvas id="myChart" width="200px" height="200px"></canvas>          
-                </div>
+    <div class="content">
+        <div class="grid-1-2">
+            <div>
+                <form action="" method="post">
+                    <select name="type" id="type" onchange="Onchange()">
+                        <option value="Pie">Pie</option>
+                        <option value="Bar">Bar</option>
+                        <option value="Line">Line</option>
+                        <option value="Pie">Pie</option>
+                    </select>
+                </form>
             </div>
-            <div class="Card margin-y-20">
-                <div class="Card-Header">
-                    <h3>Infographic</h3>
-                </div>
-                <div class="Card-Body padding-20">
-                    <h1>Census</h1>
-                    <p>
-                        Population and housing census is the process of systematically obtaining and recoding demographic, economic and social data, at a specified time, of the country’s population. 
-                        A census it made once in interval of 10 years: 1978, 1991, 2002, 2012 and next will be in 2022. Before the day of the census the country should be close (migration poste will close to avoid foreign to entre or to leave because they count too).
-                    </p>
-                    <h1>Survey</h1>
-                    <p>
-                        Compared to other survey, in which information is collected from only a small sample of the resident, and from that conclusion are reached regarding the general population, the population and housing census gets data from the entire population.
-                    </p>
-                </div>
+            <div>
+                <canvas id="myChart" width="200px" height="200px"></canvas> 
             </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
+
+    function Onchange(){
+        let type = document.getElementById('type')
+        let TypeText = type.text
+        alert(TypeText)
+    }
 const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
     type: 'bar',
