@@ -41,9 +41,11 @@
             <img src="./assets/img/racine14.jpg" alt="Profi img" class="img-profil">
         </div>
     </nav>
-    <div class="content">
-        <div class="grid-1-2">
-            <div>
+
+
+    <div class="container-fluid">
+        <div class="main">
+            <div class="Side-Left">
                 <form action="" method="post">
                     <select name="type" id="type" onchange="Onchange()">
                         <option value="Pie">Pie</option>
@@ -53,19 +55,31 @@
                     </select>
                 </form>
             </div>
-            <div>
-                <canvas id="myChart" width="200px" height="200px"></canvas> 
+            <div class="Side-Center">
+                <div class="Datas-Center">
+                    <div class="Card">
+                        <div class="Card-Body">
+                            <canvas id="myChart" width="200" height=""></canvas>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="Side-Right">
+                <div class="Side-Right-Wrapper">
+                    <div id="map"></div>
+                    <div id="Datas-comments"></div>
+                </div>
             </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
-
+    var s = document.getElementById('type')
     function Onchange(){
-        let type = document.getElementById('type')
+        let as = document.forms[0].type.value
         let TypeText = type.text
-        alert(TypeText)
+        alert(as)
     }
 const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
