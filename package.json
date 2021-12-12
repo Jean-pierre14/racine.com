@@ -4,8 +4,8 @@
   "description": "Simple portfolio of Grace El BISIMWA, this week we'll done it",
   "main": "server.js",
   "scripts": {
-    "io": "nodemon server",
-    "start": "npm start"
+    "start": "nodemon server",
+    "dev": "npm start"
   },
   "keywords": [
     "1234"
@@ -13,7 +13,10 @@
   "author": "Jean-pierre14",
   "license": "MIT",
   "devDependencies": {
+    "consola": "^2.15.3",
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.15"
   }
 }

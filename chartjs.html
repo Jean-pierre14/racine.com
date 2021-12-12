@@ -41,30 +41,33 @@
             <img src="./assets/img/racine14.jpg" alt="Profi img" class="img-profil">
         </div>
     </nav>
+
+
     <div class="container-fluid">
-        <div class="container">
-            <div class="Card">
-                <div class="Card-Header">
-                    <h3>Chartjs</h3>
-                </div>
-                <div class="Card-Body padding-20">
-                    <canvas id="myChart" width="200px" height="200px"></canvas>          
+        <div class="main">
+            <div class="Side-Left">
+                <form action="" method="post">
+                    <select name="type" id="type" onchange="Onchange()">
+                        <option value="Pie">Pie</option>
+                        <option value="Bar">Bar</option>
+                        <option value="Line">Line</option>
+                        <option value="Pie">Pie</option>
+                    </select>
+                </form>
+            </div>
+            <div class="Side-Center">
+                <div class="Datas-Center">
+                    <div class="Card">
+                        <div class="Card-Body">
+                            <canvas id="myChart" width="200" height=""></canvas>
+                        </div>
+                    </div> 
                 </div>
             </div>
-            <div class="Card margin-y-20">
-                <div class="Card-Header">
-                    <h3>Infographic</h3>
-                </div>
-                <div class="Card-Body padding-20">
-                    <h1>Census</h1>
-                    <p>
-                        Population and housing census is the process of systematically obtaining and recoding demographic, economic and social data, at a specified time, of the country’s population. 
-                        A census it made once in interval of 10 years: 1978, 1991, 2002, 2012 and next will be in 2022. Before the day of the census the country should be close (migration poste will close to avoid foreign to entre or to leave because they count too).
-                    </p>
-                    <h1>Survey</h1>
-                    <p>
-                        Compared to other survey, in which information is collected from only a small sample of the resident, and from that conclusion are reached regarding the general population, the population and housing census gets data from the entire population.
-                    </p>
+            <div class="Side-Right">
+                <div class="Side-Right-Wrapper">
+                    <div id="map"></div>
+                    <div id="Datas-comments"></div>
                 </div>
             </div>
         </div>
@@ -72,41 +75,49 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
-const ctx = document.getElementById('myChart').getContext('2d');
-const myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
+    var s = document.getElementById('type').value
+    function Onchange(){
+        let as = document.forms[0].type.value
+        let setUp = s
+        // alert(setUp)
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: `${as}`,
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
             }
-        }
+        });
     }
-});
+const ctx = document.getElementById('myChart').getContext('2d');
+
 </script>
 
 </body>
