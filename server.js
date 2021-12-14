@@ -5,7 +5,7 @@ const app = exp(), PORT = process.env.PORT || 7000
 app.use(cors())
 app.use('/', require('./routers/index'))
 
-app.listen(PORT, (e)=>{
+app.listen(PORT, (e)=> {
     if(e) error({message: `${e}`, badge: true})
     success({message: `Server run on port ${PORT}`, badge: true})
 })
