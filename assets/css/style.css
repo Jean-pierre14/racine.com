@@ -289,7 +289,14 @@
   position: relative;
   list-style: none;
 }
-.Gr-List li a {
+
+.Gr-List li a button {
+  position: relative;
+  outline: none;
+  background-color: none;
+}
+.Gr-List li a,
+.Gr-List li a button {
   position: relative;
   display: flex;
   justify-content: space-between;

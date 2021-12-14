@@ -45,18 +45,13 @@
     <div class="container-fluid">
         <div class="main">
             <div class="Side-Left">
-                <form action="" method="post">
-                    <select name="type" id="type" onchange="Onchange()">
-                        <option value="pie">Pie</option>
-                        <option value="bar">Bar</option>
-                        <option value="line">Line</option>
-                        <option value="pie">Pie</option>
-                    </select>
-                </form>
-                <div id="results"></div>
-                <p>
-                    Users List
-                </p>
+                
+                <div id="results">
+                    <p>
+                        Loading...
+                    </p>
+                </div>
+                
             </div>
             <div class="Side-Center">
                 <div class="Datas-Center">
@@ -69,6 +64,14 @@
             </div>
             <div class="Side-Right">
                 <div class="Side-Right-Wrapper">
+                    <form action="" method="post">
+                        <select name="type" id="type" onchange="Onchange()">
+                            <option value="pie">Pie</option>
+                            <option value="bar">Bar</option>
+                            <option value="line">Line</option>
+                            <option value="pie">Pie</option>
+                        </select>
+                    </form>
                     <div id="map"></div>
                     <div id="Datas-comments"></div>
                 </div>
@@ -123,9 +126,25 @@
             if(data.data.length > 0){ // Dear Grace be careful about your data. You have to check within you console
                 // console.log('We have')
                 let out = ''
+                out += '<ul class="Gr-List">'
                 data.data.forEach((user)=>{
-                    out += `<p>${user.username}</p>`
+                    out += `
+                    <li>
+                        <a href="chartjs.html/?get=${user.id}">
+                            <span>
+                                <img src="./assets/img/undraw_teaching_f-1-cm.svg" alt="Friends img" class="img-profil" />
+                            </span>
+                            <span>
+                                ${user.fullname}
+                            </span>
+                            <span>
+                                <i class="fa fa-signal"></i>
+                            </span>
+                        </a>
+                    </li>
+                    `
                 })
+                out += '</ul>'
                 document.getElementById('results').innerHTML = out
             }else{
                 console.log('No data')
