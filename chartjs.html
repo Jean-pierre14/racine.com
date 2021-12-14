@@ -75,9 +75,19 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
+    // User Fetch Api form nodejs and mysql
     fetch('')
-        .then()
+        .then((res)=> {
+            res.json().then((data)=>{
+                console.log(data)
+            })
+        })
         .catch(e=>console.log(e))
+
+
+
+
+
     var s = document.getElementById('type').value
     function Onchange(){
         let as = document.forms[0].type.value
