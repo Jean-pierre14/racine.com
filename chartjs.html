@@ -53,13 +53,10 @@
                         <option value="pie">Pie</option>
                     </select>
                 </form>
-<<<<<<< HEAD
                 <div id="results"></div>
-=======
                 <p>
                     Users List
                 </p>
->>>>>>> serverNodejs
             </div>
             <div class="Side-Center">
                 <div class="Datas-Center">
@@ -82,7 +79,7 @@
     <script>
         const ctx = document.getElementById('myChart1').getContext('2d');
             const myChart = new Chart(ctx, {
-                type: 'Pie',
+                type: 'bar',
                 data: {
                     labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
                     datasets: [{
@@ -118,22 +115,28 @@
     </script>
 
 <script>
-<<<<<<< HEAD
     // User Fetch Api form nodejs and mysql
-    fetch('')
-        .then((res)=> {
-            res.json().then((data)=>{
-                console.log(data)
-            })
+    fetch('http://localhost:7000/students')
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.data.length > 0){ // Dear Grace be careful about your data. You have to check within you console
+                // console.log('We have')
+                let out = ''
+                data.data.forEach((user)=>{
+                    out += `<p>${user.username}</p>`
+                })
+                document.getElementById('results').innerHTML = out
+            }else{
+                console.log('No data')
+            }
         })
-        .catch(e=>console.log(e))
+        .catch(e => console.log(e))
 
 
 
 
 
-=======
->>>>>>> serverNodejs
     var s = document.getElementById('type').value
     function Onchange(){
         let as = document.forms[0].type.value
@@ -141,11 +144,8 @@
         // alert(setUp)
         const ctx = document.getElementById('myChart').getContext('2d');
         const myChart = new Chart(ctx, {
-<<<<<<< HEAD
             type: `${as}`,
-=======
             type: 'Pie',
->>>>>>> serverNodejs
             data: {
                 labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
                 datasets: [{
@@ -179,7 +179,7 @@
             }
         });
     }
-const ctx = document.getElementById('myChart').getContext('2d');
+
 
 </script>
 

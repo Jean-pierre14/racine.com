@@ -16,10 +16,7 @@
     "consola": "^2.15.3",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-<<<<<<< HEAD
-=======
     "mysql": "^2.18.1",
->>>>>>> serverNodejs
     "nodemon": "^2.0.15"
   }
 }
