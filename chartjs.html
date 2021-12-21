@@ -20,7 +20,7 @@
 <body>
     <nav class="Navbar">
         <div class="topBar-Left">
-            <a href="index.html" class="logo">Jean-Pierre14</a>
+            <a href="index.html" class="logo">Mr. BISIMWA</a>
         </div>
         <div class="topBar-Center">
             <div class="input-group">
@@ -57,6 +57,13 @@
                 <p>
                     Users List
                 </p>
+                
+                <div id="results">
+                    <p>
+                        Loading...
+                    </p>
+                </div>
+                
             </div>
             <div class="Side-Center">
                 <div class="Datas-Center">
@@ -69,6 +76,14 @@
             </div>
             <div class="Side-Right">
                 <div class="Side-Right-Wrapper">
+                    <form action="" method="post">
+                        <select name="type" id="type" onchange="Onchange()">
+                            <option value="pie">Pie</option>
+                            <option value="bar">Bar</option>
+                            <option value="line">Line</option>
+                            <option value="pie">Pie</option>
+                        </select>
+                    </form>
                     <div id="map"></div>
                     <div id="Datas-comments"></div>
                 </div>
@@ -79,7 +94,7 @@
     <script>
         const ctx = document.getElementById('myChart1').getContext('2d');
             const myChart = new Chart(ctx, {
-                type: 'Pie',
+                type: 'bar',
                 data: {
                     labels: ['Adobe', 'French', 'English', 'Driving', 'Stastics', 'Collaboration'],
                     datasets: [{
@@ -115,6 +130,50 @@
     </script>
 
 <script>
+    SelectAll()
+    function SelectAll(){
+        // User Fetch Api form nodejs and mysql
+        fetch('http://localhost:7000/students')
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.data.length > 0) { // Dear Grace be careful about your data. You have to check within you console
+                    // console.log('We have')
+                    let out = ''
+                    out += '<ul class="Gr-List">'
+                    data.data.forEach((user) => {
+                        out += `
+                    <li class="List-User">
+                        <a href="javascript:void()" class="List-User" id="${user.id}">
+                            <span>
+                                <img src="./assets/img/undraw_teaching_f-1-cm.svg" alt="Friends img" class="img-profil" />
+                            </span>
+                            <span>
+                                ${user.fullname}
+                            </span>
+                            <span>
+                                <i class="fa fa-signal"></i>
+                            </span>
+                        </a>
+                    </li>
+                    `
+                    })
+                    out += '</ul>'
+                    document.getElementById('results').innerHTML = out
+                } else {
+                    console.log('No data')
+                }
+            })
+            .catch(e => console.log(e))
+    }
+
+
+    let Get = document.querySelectorAll('.List-User')
+    Get.addEventListener('click', function(){
+        alert("Click")
+    })
+
+
     var s = document.getElementById('type').value
     function Onchange(){
         let as = document.forms[0].type.value
@@ -122,6 +181,7 @@
         // alert(setUp)
         const ctx = document.getElementById('myChart').getContext('2d');
         const myChart = new Chart(ctx, {
+            type: `${as}`,
             type: 'Pie',
             data: {
                 labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
@@ -156,7 +216,7 @@
             }
         });
     }
-const ctx = document.getElementById('myChart').getContext('2d');
+
 
 </script>
 
