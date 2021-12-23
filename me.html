@@ -12,6 +12,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.com/libraries/ekko-lightbox">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-lightbox/0.7.0/bootstrap-lightbox.css"
+            integrity="sha512-yq4CJHTd7nnaksoLci/2pIhFXy7uvAcM5hSP2DWvwRuT1FFTRhmsqhgCrHB2Mc6FrmxErBkiTH2yDZmuoRXunw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css"
+        integrity="sha512-Woz+DqWYJ51bpVk5Fv0yES/edIMXjj3Ynda+KWTIkGoynAMHrqTcDUQltbipuiaD5ymEo9520lyoVOo9jCQOCA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="shortcut icon" href="./assets/img/racine14.jpg" type="image/x-icon">
@@ -42,44 +49,82 @@
         </div>
     </nav>
     <div class="container-fluid">
-        <div class="container">
-            <div class="row">
-                <div class="col12">
-                    <div class="Card">
-                        <div class="Card-Header">
-                            <h2>CHIRUZA BISIMWA Grace</h2>
-                        </div>
-                        <div class="Card-Body">
-                            <h3 class="title-bg"><i class="fa fa-user icon-u"></i> Identifications</h3>
-                            <div class="padding-20">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad accusantium perferendis molestias cum illo placeat vero molestiae voluptate nostrum? Eius, id enim. Repudiandae fugit, ab quia modi facere quos et?
+        <div class="main">
+            <div class="Side-Left">
+                <div class="Search-Box">
+                    <form action="#" method="get" class="">
+                        <input type="text" placeholder="Search..." class="search-form">
+                    </form>
+                </div>
+                <ul class="Gr-List" id="Datas-users">
+                    <li>
+                        <a href="#user=uniqueId">
+                            <span>
+                                <img src="./assets/img/undraw_teaching_f-1-cm.svg" alt="Friends img" class="img-profil" />
+                            </span>
+                            <span>Grace El Bisimwa</span>
+                            <span>
+                                green button
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#user=uniqueId">
+                            <span>
+                                <img src="./assets/img/racine14.jpg" alt="Friends img" class="img-profil" />
+                            </span>
+                            <span>Grace El Bisimwa</span>
+                            <span>
+                                green button
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#user=uniqueId">
+                            <span>
+                                <img src="./assets/img/racine14.jpg" alt="Friends img" class="img-profil" />
+                            </span>
+                            <span>Grace El Bisimwa</span>
+                            <span>
+                                green button
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="Side-Center">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="Card">
+                            <div class="Card-Header">
+                                <h3>La famille d'abord</h3>
                             </div>
-                            <h3 class="title-bg">etudes faites</h3>
-                            <div class="padding-20">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, doloremque. Sunt quis aspernatur sequi non delectus dolorem praesentium, facere quaerat ipsam. Distinctio ducimus mollitia atque. Odit maxime aliquid ratione autem.
+                            <div class="Card-Body">
+                                <div class="Img-Cover">
+                                    <a href="./assets/img/IMG_4534.JPG" data-toggle="lightbox" data-title="Famille" data-footer="Img name">
+                                        <img src="./assets/img/IMG_4534.JPG" class="Img-fluid">
+                                    </a>
+                                </div>
                             </div>
-                            <h3 class="title-bg">Formations et diplomes</h3>
-                            <div class="padding-20">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam eligendi exercitationem possimus quia dolorum officiis? Provident error nam facilis voluptates impedit aliquid, tempora repudiandae eveniet inventore delectus id incidunt nisi!
-                                </p>
-                            </div>
-                            <h3 class="title-bg">Langues parler</h3>
-                            <div class="padding-20">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, facere! Atque, id quaerat eum deleniti natus aliquid minima corrupti molestiae itaque odio nisi facere laudantium, quo culpa iure harum explicabo?
-                                </p>
-                            </div>
-                        </div>
-                        <div class="Card-Footer">
-                            <a href="#print" download class="button">Download</a>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="Side-Right">
+                <div class="Side-Right-Wrapper">
+                    <div id="map"></div>
+                    <div id="Datas-comments"></div>
                 </div>
             </div>
         </div>
     </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"
+    integrity="sha512-k2GFCTbp9rQU412BStrcD/rlwv1PYec9SNrkbQlo6RZCf75l6KcC3UwDY8H5n5hl4v77IDtIPwOk9Dqjs/mMBQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-lightbox/0.7.0/bootstrap-lightbox.min.js"
+    integrity="sha512-pG6Jpi0rC+Tc4UBLolT53rjjfGNuHBgEGqe6E29doS/zTJhSI9mGIwkiq+wSP1InaQs61vpQ+UhNgTUhyyYGDw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script>
     function initMap() {
