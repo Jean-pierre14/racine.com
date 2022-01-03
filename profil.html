@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="shortcut icon" href="./assets/img/racine14.jpg" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 
 <body>
@@ -82,15 +83,20 @@
                             </div>
                         </div>
                         <div class="Card-Footer">
-                            <a href="#print" download class="button">Download</a>
+                            <p>copyright &copy; <span id="year">2022</span></p>
                         </div>
                     </div>
+                    <button id="Download" type="button" class="button">Download</button>
+                    <br>
+                    <br>
+                    <br>
                 </div>
             </div>
         </div>
     </div>
 </body>
 
+<script src="./assets/js/pdf.js"></script>
 <script>
     function initMap() {
         const options = {
