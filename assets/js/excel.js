@@ -1,37 +1,40 @@
-
 window.onload = () => {
+  const input = document.getElementById("file");
 
-    const input = document.getElementById('file')
+  input.onchange = (event) => {
+    const file = event.target.files[0];
+    // console.log(file) Test if the file there.
 
-    input.onchange = (event) =>{
+    if (file) {
+      // console.log(file) second test
+      let fileReader = new FileReader();
 
-        const file = event.target.files[0]
-        // console.log(file) Test if the file there.
+      fileReader.readAsBinaryString(file);
 
-        if(file){
-            // console.log(file) second test
-            let fileReader = new FileReader()
+      fileReader.onload = (event) => {
+        let data = event.target.result;
 
-            fileReader.readAsBinaryString(file)
+        let workbook = XLSX.read(data, { type: "binary" });
 
-            fileReader.onload = (event) => {
+        console.log(workbook);
 
-                let data = event.target.result
+        workbook.SheetNames.forEach((sheet) => {
+          let rowObject = XLSX.utils.sheet_to_row_object_array(
+            workbook.Sheets[sheet]
+          );
 
-                let workbook = XLSX.read(data, {type: "binary"})
+          //   console.log(rowObject);
+          let data = "";
+          let myObj = JSON.parse(rowObject);
 
-                console.log(workbook)
-
-                workbook.SheetNames.forEach(Sheet => {
-
-                    let rowObject = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheet])
-
-                    console.log(rowObject)
-
-                    document.getElementById('result').innerHTML = JSON.stringify(rowObject)
-                    
-                })
-            }
-        }
+          data += "<table>";
+          for (let x in myObj) {
+            data = `<tr><td> ${myObj[x].name}</td></tr>`;
+          }
+          data = "</table>";
+          document.getElementById("result").innerHTML = data;
+        });
+      };
     }
-}
+  };
+};

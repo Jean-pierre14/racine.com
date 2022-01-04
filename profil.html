@@ -153,6 +153,8 @@
 
 <script src="./assets/js/pdf.js"></script>
 <script>
+    let d = new Date()
+    document.getElementById('year').innerHTML = 'Bisimwa '+ d.getFullYear()
     function initMap() {
         const options = {
             center: { lat: 1.9441, lng: 30.0619 },

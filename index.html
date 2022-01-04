@@ -265,7 +265,7 @@
         <div class="container">
             <div class="row py-5">
                 <div class="col-md-4">
-                    <p>copyright &copy; 2021</p>
+                    <p>copyright &copy; <span id="year">2000</span></p>
                 </div>
                 <div class="col-md-4">
                     <form action="" method="post">
@@ -287,6 +287,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script> // Config and customizing of the chartjss
+    let d = new Date()
+    document.getElementById('year').innerHTML = 'Bisimwa ' + d.getFullYear()
     const ctx = document.getElementById('myChart').getContext('2d');
     const myChart = new Chart(ctx, {
     type: 'bar',
