@@ -304,11 +304,11 @@
                 if(xhr.readyState === XMLHttpRequest.DONE){
                     if(xhr.status === 200){
                         let data = xhr.response
-                        console.log(data)
+                        // console.log(data)
                     }
                 }
             }
-            xhr.open()
+            xhr.open("POST","http://localhost:7000/suscribe/", true)
             let formData = new FormData(form)
             xhr.send(formData)
         }else{

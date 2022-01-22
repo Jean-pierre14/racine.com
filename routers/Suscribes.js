@@ -23,7 +23,7 @@ router.get("/All", (req, res) => {
   let sql = "SELECT * FROM abonners ORDER BY id DESC";
   db.query(sql, (err, results) => {
     if (err) throw err;
-    console.log(results);
+    // console.log(results);
     res.json(results);
   });
 });
