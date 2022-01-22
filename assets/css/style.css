@@ -351,9 +351,38 @@
   padding: 10px;
 }
 
+.ErrorNet {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: rgba(255, 101, 101, 0.401);
+  border: 1.5px solid rgba(255, 40, 40, 0.367);
+  border-radius: 0.4rem;
+  color: rgba(167, 12, 12, 0.551);
+}
+
+.size-y-scroll {
+  scroll-behavior: smooth;
+  overflow-y: auto;
+}
+
 @media (max-width: 600) {
   * {
     font-family: calibri !important;
+  }
+  .Card,
+  .row,
+  .container-fluid {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+  .container {
+    position: relative;
+    width: 90%;
+    margin: 10px auto;
   }
   .Navbar {
     position: fixed;
@@ -368,10 +397,54 @@
 
 .ToggleMenu {
   display: none;
+  z-index: 10;
+}
+.bg-black {
+  background-color: #000;
+  color: #fff;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-3 > div {
+  padding: 10px;
+}
+.wrapper {
+  padding: 10px;
 }
 @media (max-width: 750px) {
   * {
     font-family: calibri !important;
+  }
+  .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .grid-3 > div:nth-child(1) p,
+  .grid-3 > div:nth-child(3) p {
+    text-align: center;
+  }
+  .grid-3 form input {
+    outline: none;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #000;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 0.4rem;
+    margin: 10px 0;
+  }
+  .grid-3 form button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #ccc;
+    color: #000;
+
+    outline: none !important;
+    border: none;
+    border-radius: 0.4rem;
   }
   .ToggleMenu {
     position: fixed;
@@ -427,47 +500,54 @@
     background: rgb(42, 76, 140);
   }
 
-  .topBar-Right .list::before {
-    content: "";
-    position: absolute;
-    z-index: 0;
-    top: 100px;
+  .list {
+    position: fixed;
+    top: 0;
     left: 0;
     width: 230px;
-    height: calc(100vh - 100px);
-    background: rgb(42, 76, 140);
-  }
-  .topBar-Right .list {
-    z-index: 99;
-    display: grid;
-    grid-template-columns: 1fr;
-
-    position: fixed;
-    top: 100px;
-    left: -230px;
+    height: 100vh;
     padding: 10px;
-    background: rgb(42, 76, 140);
+    background-color: rgba(0, 0, 0, 0.687);
+    display: flex;
+    flex-direction: column;
 
-    width: 230px;
-    /* height: calc(100vh - 100px); */
+    font-family: Arial, Helvetica, sans-serif !important;
+    transition: all 0.3s ease-in-out;
   }
-  .topBar-Right .list li a {
+
+  .list:hover {
+    background-color: rgb(0, 0, 0);
+  }
+
+  .list li {
     position: relative;
-    display: block;
-    text-align: left;
-    font-family: calibri !important;
-    font-size: 16px;
-    font-weight: 300;
+    width: 100%;
     margin: 5px 0;
-    padding: 10px;
-    height: 35px;
-    background-color: royalblue;
-    z-index: 999;
+  }
+
+  .list li a {
+    /* text-align: left; */
+    position: relative;
+    width: 100%;
+    display: block;
+    color: #fff !important;
+  }
+
+  .list li a:hover,
+  .list li a:focus,
+  .list li a:active {
+    position: relative;
+    color: #fff;
+    background-color: rgb(38, 85, 156);
+    border-bottom: 2px solid #fff;
   }
   .topBar-Right .img-profil {
     position: absolute;
     top: 5px;
     right: 10px;
+  }
+  .margin--top {
+    margin-top: 50px;
   }
   .topBar-Left {
     position: relative;

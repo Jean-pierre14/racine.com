@@ -1,15 +1,18 @@
-let output = '';
-const paragraph = document.getElementById('Datas');
+const d = new Date();
+document.getElementById("year").textContent = d.getFullYear();
+
+let output = "";
+const paragraph = document.getElementById("Datas");
 if (paragraph) {
-  paragraph.innerHTML = 'Loading...';
+  paragraph.innerHTML = "Loading...";
 }
 
-fetch('https://jsonplaceholder.typicode.com/todos')
-  .then(response => response.json())
-  .then(json => {
+fetch("https://jsonplaceholder.typicode.com/todos")
+  .then((response) => response.json())
+  .then((json) => {
     if (json.length > 0) {
       // console.log(JSON.stringify(json))
-      let output = ''
+      let output = "";
       json.forEach((u) => {
         output += `
         <div class="Card">
@@ -23,22 +26,26 @@ fetch('https://jsonplaceholder.typicode.com/todos')
             <button type="button" class="button btn btn-success">${u.completed}</button>
           </div>
         </div>
-        `
-      })
-      if (paragraph.innerHTML = '') { paragraph.innerHTML = 'Loading' } else { paragraph.innerHTML = output }
+        `;
+      });
+      if ((paragraph.innerHTML = "")) {
+        paragraph.innerHTML = "Loading";
+      } else {
+        paragraph.innerHTML = output;
+      }
     } else {
-      console.log('No data')
+      console.log("No data");
     }
-  })
+  });
 
 // Fetch users using the fake jsonplaceholder api
-const UsersDom = document.getElementById('Datas-users')
-let data = 'Loading'
-fetch('https://jsonplaceholder.typicode.com/users')
-  .then(res => res.json())
-  .then(json => {
+const UsersDom = document.getElementById("Datas-users");
+let data = "Loading...";
+fetch("https://jsonplaceholder.typicode.com/users")
+  .then((res) => res.json())
+  .then((json) => {
     if (json.length > 0) {
-      data = ''
+      data = "";
       json.forEach((user) => {
         data += `
         <li>
@@ -49,25 +56,28 @@ fetch('https://jsonplaceholder.typicode.com/users')
               <span>${user.name}</span>
           </a>
       </li>
-        `
-      })
+        `;
+      });
     } else {
-      data = '<p class="info danger">There no data</p>'
+      data = '<p class="info danger">There no data</p>';
     }
-    UsersDom.innerHTML = data
+    UsersDom.innerHTML = data;
   })
-  .catch((e) => console.log(e))
+  .catch((e) => {
+    UsersDom.innerHTML = `<p class="ErrorNet">Loading...</p>`;
+    console.log(e);
+  });
 
 // To Get the params using javascript
 function User() {
-  let UrlString = window.location.href
-  let url = new URL(UrlString)
-  let getData = url.searchParams.get('get')
+  let UrlString = window.location.href;
+  let url = new URL(UrlString);
+  let getData = url.searchParams.get("get");
   // alert(getData)
 
   fetch(`https://jsonplaceholder.typicode.com/users/${getData}`)
-    .then(res => res.json())
-    .then(json => {
+    .then((res) => res.json())
+    .then((json) => {
       data = `
         <div class="Card">
           <div class="Card-Header">
@@ -125,33 +135,46 @@ function User() {
             </ul>
           </div>
         </div>
-      `
-      let Details = ''
+      `;
+      let Details = "";
       Details = `
         <div class="Card">
           <div class="Card-Header">
-            <h3>Campany: ${(json.company.name === '' ? 'Goma' : json.company.name)}</h3>
+            <h3>Campany: ${
+              json.company.name === "" ? "Goma" : json.company.name
+            }</h3>
           </div>
           <div class="Card-Body padding-20">
             <ul>
               <li class="flex justify-content-between list-items">
                 <span>catch Phrase: </span>
-                <span>${(json.company.catchPhrase === '' ? 'Goma' : json.company.catchPhrase)}</span>
+                <span>${
+                  json.company.catchPhrase === ""
+                    ? "Goma"
+                    : json.company.catchPhrase
+                }</span>
               </li>
               <li class="flex justify-content-between list-items">
                 <span>catch Phrase: </span>
-                <span>${(json.company.bs === '' ? 'Goma' : json.company.bs)}</span>
+                <span>${
+                  json.company.bs === "" ? "Goma" : json.company.bs
+                }</span>
               </li>
             </ul>
           </div>
           <div class="Card-Body"></div>
         </div>
-      `
-      document.getElementById('Datas-user-Details').innerHTML = Details
-      document.getElementById('Datas-user').innerHTML = data
+      `;
+      document.getElementById("Datas-user-Details").innerHTML = Details;
+      document.getElementById("Datas-user").innerHTML = data;
       // console.log(data)
     })
-    .catch(e => console.log(e))
+    .catch((e) => {
+      document.getElementById(
+        "Datas-user"
+      ).innerHTML = `<p class="ErrorNet">Loading...</p>`;
+      console.log(e);
+    });
 }
 
-User()
+User();

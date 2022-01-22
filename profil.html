@@ -41,9 +41,14 @@
             </ul>
             <img src="./assets/img/racine14.jpg" alt="Profi img" class="img-profil">
         </div>
+        <div class="ToggleMenu">
+            <button value="Menu" id="ToggleText" class="btnToggle">
+                Menu
+            </button>
+        </div>
     </nav>
-    <div class="container-fluid">
-        <div class="container">
+    <div class="container-fluid margin--top">
+        <div class="container margin--top">
             <div class="row">
                 <div class="col12"  id="profil">
                     <div class="Card">
@@ -78,63 +83,65 @@
                             <h3 class="title-bg">Langues parler</h3>
                             <div class="padding-20">
                                 <h3>Competences /10</h3>
-                                <table>
-                                    <thead>
-                                        <th>Nom</th>
-                                        <th>Lire</th>
-                                        <th>Parler</th>
-                                        <th>Ecrire*</th>
-                                        <th>Ecouter*</th>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                Anglais
-                                            </td>
-                                            <td>9</td>
-                                            <td>9</td>
-                                            <td>9</td>
-                                            <td>9</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Swahili
-                                            </td>
-                                            <td>7</td>
-                                            <td>10</td>
-                                            <td>8</td>
-                                            <td>10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Lingala
-                                            </td>
-                                            <td>6</td>
-                                            <td>7</td>
-                                            <td>7</td>
-                                            <td>8</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Kinyarwanda
-                                            </td>
-                                            <td>5</td>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td>4</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Francais*
-                                            </td>
-                                            <td>9</td>
-                                            <td>9</td>
-                                            <td>9</td>
-                                            <td>9</td>
-                                        </tr>
-
-                                    </tbody>
-                                </table>
+                                <div class="size-y-scroll">
+                                    <table>
+                                        <thead>
+                                            <th>Nom</th>
+                                            <th>Lire</th>
+                                            <th>Parler</th>
+                                            <th>Ecrire*</th>
+                                            <th>Ecouter*</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    Anglais
+                                                </td>
+                                                <td>9</td>
+                                                <td>9</td>
+                                                <td>9</td>
+                                                <td>9</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Swahili
+                                                </td>
+                                                <td>7</td>
+                                                <td>10</td>
+                                                <td>8</td>
+                                                <td>10</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Lingala
+                                                </td>
+                                                <td>6</td>
+                                                <td>7</td>
+                                                <td>7</td>
+                                                <td>8</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Kinyarwanda
+                                                </td>
+                                                <td>5</td>
+                                                <td>4</td>
+                                                <td>4</td>
+                                                <td>4</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Francais*
+                                                </td>
+                                                <td>9</td>
+                                                <td>9</td>
+                                                <td>9</td>
+                                                <td>9</td>
+                                            </tr>
+                                    
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                         <div class="Card-Footer">
@@ -151,7 +158,7 @@
     </div>
 </body>
 
-<script src="./assets/js/pdf.js"></script>
+<script src="./assets/js/pdf.js"></script><script src="./assets/js/Animations.js.babel"></script>
 <script>
     let d = new Date()
     document.getElementById('year').innerHTML = 'Bisimwa '+ d.getFullYear()
