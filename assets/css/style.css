@@ -406,12 +406,41 @@
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 .grid-3 > div {
   padding: 10px;
 }
 .wrapper {
   padding: 10px;
+}
+
+.grid-3 > div:nth-child(1) p,
+.grid-3 > div:nth-child(3) p {
+  text-align: center;
+}
+.grid-3 form input {
+  outline: none;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #000;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 0.4rem;
+  margin: 10px 0;
+}
+.grid-3 form button {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #ccc;
+  color: #000;
+
+  outline: none !important;
+  border: none;
+  border-radius: 0.4rem;
 }
 @media (max-width: 750px) {
   * {
@@ -420,31 +449,6 @@
   .grid-3 {
     display: grid;
     grid-template-columns: 1fr;
-  }
-  .grid-3 > div:nth-child(1) p,
-  .grid-3 > div:nth-child(3) p {
-    text-align: center;
-  }
-  .grid-3 form input {
-    outline: none;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    color: #000;
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border-radius: 0.4rem;
-    margin: 10px 0;
-  }
-  .grid-3 form button {
-    padding: 10px 20px;
-    cursor: pointer;
-    background-color: #ccc;
-    color: #000;
-
-    outline: none !important;
-    border: none;
-    border-radius: 0.4rem;
   }
   .ToggleMenu {
     position: fixed;

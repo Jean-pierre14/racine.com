@@ -7,6 +7,7 @@ const app = exp(),
 // Middlewares
 app.use(cors());
 app.use("/", require("./routers/index"));
+app.use("/suscribe", require("./routers/Suscribes"));
 
 app.listen(PORT, (e) => {
   if (e) error({ message: `${e}`, badge: true });

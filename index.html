@@ -272,23 +272,37 @@
                 <p>Put Jehovah first</p>
             </div>
             <div class="col-md-4">
-                <form action="" method="post">
+                <form action="" autocomplete="off" method="post">
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email" placeholder="Suscribe to us: Grace@bisimwa.congo">
+                        <input type="email" name="email" id="emailAbonner" placeholder="Suscribe to us: Grace@bisimwa.congo">
                     </div>
                     <div class="form-group">
-                        <button class="btn btn-success">Send</button>
+                        <button type="button" id="SubscribeBtn" class="btn btn-success">Subscribe</button>
                     </div>
                 </form>
             </div>
             <div class="col-md-4">
                 <p>copyright &copy; <span id="year">2000</span></p>
-                
             </div>
         </div>
     </div>
 </body>
+
+<script>
+    const SubscribeBtn = document.getElementById('SubscribeBtn');
+    let Email = document.getElementById('emailAbonner'),
+        emailData = Email.value
+
+    SubscribeBtn.onclick = () => {
+        let email = emailData.trim()
+        if(email === ''){
+            alert("Email is empty")
+        }else{
+            alert('Email: '+ email)
+        }
+    }
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script> // Config and customizing of the chartjss
