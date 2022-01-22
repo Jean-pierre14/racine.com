@@ -365,9 +365,44 @@
     flex: 12;
   }
 }
+
+.ToggleMenu {
+  display: none;
+}
 @media (max-width: 750px) {
   * {
     font-family: calibri !important;
+  }
+  .ToggleMenu {
+    position: fixed;
+    top: 55px;
+    right: -8px;
+
+    padding: 10px;
+    background-color: rgba(51, 103, 199, 0.3);
+    border-radius: 10px 0 0 20px;
+    display: block;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    transition: all 0.4s ease-in-out;
+  }
+  .ToggleMenu button {
+    border: none;
+    outline: none;
+    background: none;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .ToggleMenu:hover,
+  .ToggleMenu:focus {
+    right: 0;
+    background-color: rgba(32, 104, 238, 1);
+    color: #fff;
   }
   .Navbar {
     width: 100%;

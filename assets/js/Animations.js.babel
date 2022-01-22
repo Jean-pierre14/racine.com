@@ -1,0 +1,14 @@
+const MenuContent = document.querySelector(".list"),
+  BtnToggle = document.querySelector(".btnToggle");
+
+let ToggleText = document.getElementById("ToggleText").value;
+
+BtnToggle.onclick = () => {
+  if (ToggleText === "Menu") {
+    MenuContent.style.left = 0;
+    ToggleText = "Close";
+  } else {
+    MenuContent.style.left = `-230px`;
+    ToggleText = "Menu";
+  }
+};
