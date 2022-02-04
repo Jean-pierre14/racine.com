@@ -17,6 +17,12 @@
   grid-gap: 10px;
 }
 
+table {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+}
+
 .header-text {
   border-radius: 0.4rem 0.4rem 0 0;
   background-color: #0160a0;
@@ -40,4 +46,5 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-}/*# sourceMappingURL=scss.css.map */
+}
+/*# sourceMappingURL=scss.css.map */
