@@ -32,6 +32,10 @@ table {
   font-weight: 300;
 }
 
+.div-img {
+  position: relative;
+}
+
 .box-Content {
   padding: 10px;
 }
