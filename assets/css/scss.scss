@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,13 +6,12 @@
 
 $White: #fff;
 $padding: 10px;
-
-.content-Center{
+.content-Center {
     padding: 10px 0;
     position: relative;
     width: 70%;
     margin: 0 auto;
-    .Row{
+    .Row {
         position: relative;
         display: grid;
         grid-template-columns: 1fr 3fr;
@@ -20,12 +19,13 @@ $padding: 10px;
     }
 }
 
-table{
+table {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 200;
     font-size: 14px;
 }
-.header-text{
+
+.header-text {
     border-radius: .4rem .4rem 0 0;
     background-color: rgb(1, 96, 160);
     color: $White;
@@ -34,21 +34,27 @@ table{
     font-weight: 300;
 }
 
-.div-img{
+.div-img {
     position: relative;
+    display: block;
+    width: 100%;
+    img {
+        position: relative;
+        width: 100%;
+    }
 }
-.box-Content{
+
+.box-Content {
     padding: 10px;
 }
 
-.paragraph{
+.paragraph {
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     margin: 10px 0;
     cursor: pointer;
     border-bottom: 1px solid #ccc;
-
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
