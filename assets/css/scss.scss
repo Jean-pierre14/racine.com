@@ -10,6 +10,7 @@ $padding: 10px;
     padding: 10px 0;
     position: relative;
     width: 70%;
+    // background-color: rgba(53, 88, 104, 0.7);
     margin: 0 auto;
     .Row {
         position: relative;
@@ -58,4 +59,13 @@ table {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.circle-1,
+.circle-2 {
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    background: #fff;
+    background-color: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
 }
