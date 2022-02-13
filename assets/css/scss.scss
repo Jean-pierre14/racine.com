@@ -75,8 +75,7 @@ table {
 
 #results {
     position: relative;
-    z-index: 99;
-    font-family: roboto;
+    z-index: 2;
     padding: 10px;
     border-radius: .4rem;
     background: #fff;
@@ -84,6 +83,16 @@ table {
     -webkit-box-shadow: 3px 0px 27px -1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 3px 0px 27px -1px rgba(0, 0, 0, 0.75);
     background-color: linear-gradient(to right bottom, rbga(255, 255, 255, 0.7), rgba(255, 255, 255, 0.103));
+    backdrop-filter: blur(20rem);
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: roboto;
+    }
     &::before {
         position: absolute;
         content: "";
@@ -99,6 +108,130 @@ table {
             box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0);
         }
     }
+}
+
+.element {
+    position: relative;
+    display: block;
+    padding: 10px;
+    margin: 15px auto;
+    background: rgb(236, 236, 236);
+    border-radius: .4rem;
+}
+
+.content-center-box {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    .box-center {
+        position: relative;
+        // width: 30%;
+        margin: 0 auto;
+        background: #ccc;
+        padding: 5px 20px;
+        border-radius: .4rem;
+        background-color: linear-gradient(to right bottom, rgba(255, 255, 245, 0.5), rgba(255, 255, 255, 0.2));
+        .group {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            .Button {
+                padding: 10px 15px;
+                background: none;
+                outline: none;
+                border: none;
+                background-color: #fff;
+                cursor: pointer;
+                transition: all 0.3s ease-in;
+                &.active {
+                    background-color: #111;
+                    color: #fff;
+                }
+            }
+            .one {
+                border-top-left-radius: .4rem;
+                border-bottom-left-radius: .4rem;
+            }
+            .second {
+                border-top-right-radius: .4rem;
+                border-bottom-right-radius: .4rem;
+            }
+        }
+    }
+}
+
+.box-elmts {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    &>div {
+        position: relative;
+        background: #ccc;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin: 0 auto;
+        padding: 10px;
+        min-width: 200px;
+        min-height: 200px;
+        border-radius: .4rem;
+        cursor: pointer;
+        h3 {
+            text-align: center;
+        }
+        .icon {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto;
+            object-fit: cover;
+        }
+    }
+    @media screen and(max-width: 768px) {
+        & {
+            position: relative;
+            background: #ccc;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 2rem;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 5px;
+            &>div {
+                margin: 10px auto;
+            }
+        }
+        .icon {
+            display: block;
+            width: 250px;
+        }
+    }
+}
+
+.icon {
+    position: relative;
+    width: 100%;
+}
+
+.h-text {
+    margin: 10px 0;
+    text-decoration: underline;
+    // border-bottom: 2px solid rgb(238, 238, 238);
 }
 
 .content-main {
