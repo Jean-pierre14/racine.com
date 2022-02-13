@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,400;1,500;1,700;1,900&display=swap');
 $White: #fff;
 $padding: 10px;
 .content-Center {
@@ -17,6 +18,17 @@ $padding: 10px;
         display: grid;
         grid-template-columns: 1fr 3fr;
         grid-gap: 10px;
+    }
+    @media screen and(max-width: 768px) {
+        & {
+            width: 100%;
+            margin: 0;
+            .Row {
+                width: 100%;
+                margin: 50px auto;
+                grid-template-columns: 1fr;
+            }
+        }
     }
 }
 
@@ -59,6 +71,44 @@ table {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+#results {
+    position: relative;
+    z-index: 99;
+    font-family: roboto;
+    padding: 10px;
+    border-radius: .4rem;
+    background: #fff;
+    box-shadow: 3px 0px 27px -1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 3px 0px 27px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 0px 27px -1px rgba(0, 0, 0, 0.75);
+    background-color: linear-gradient(to right bottom, rbga(255, 255, 255, 0.7), rgba(255, 255, 255, 0.103));
+    &::before {
+        position: absolute;
+        content: "";
+        z-index: 0;
+        top: -25px;
+        right: -25px;
+        width: 100px;
+        height: 100px;
+        background-color: #fff;
+    }
+    @media screen and (max-width: 768px) {
+        & {
+            box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0);
+        }
+    }
+}
+
+.content-main {
+    position: relative;
+    background: #fff;
+    background-image: url(../img/plantyn_primaire_francais_subject-header.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    backdrop-filter: blur(20rem);
 }
 
 .circle-1,
