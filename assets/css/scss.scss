@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+$bg-primary: rgb(1, 96, 160);
 $White: #fff;
 $padding: 10px;
 .content-Center {
@@ -102,7 +103,7 @@ table {
                 object-fit: cover;
                 margin: 0 0 -120px 0;
                 border-radius: 50%;
-                z-index: 999;
+                z-index: 2;
                 background-color: #fff;
                 border: 5px solid rgb(255, 255, 255);
                 box-shadow: 0 3px 2px 0 rgba(5, 5, 5, 0.233);
@@ -115,7 +116,89 @@ table {
                 width: 100%;
                 padding: 80px 10px 10px 10px;
                 background: #fff;
+                .grid-2 {
+                    position: relative;
+                    display: grid;
+                    grid-template-columns: 2fr 1fr;
+                    gap: 2rem;
+                    font-family: roboto, 'sans-serif';
+                    .col-3 {
+                        position: relative;
+                        padding: 10px;
+                        @include BorderRaduis();
+                        background-color: #fff;
+                        box-shadow: 0 3px 0 2px rgba(255, 255, 255, 0.1);
+                    }
+                    @media screen and (max-width: 768px) {
+                        & {
+                            display: grid;
+                            grid-template-columns: 1fr;
+                        }
+                    }
+                }
             }
         }
     }
+}
+
+.Button {
+    position: relative;
+    display: inline-block;
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+    padding: 8px 10px;
+}
+
+.outline {
+    outline: none !important;
+}
+
+.border-radius {
+    @include BorderRaduis();
+}
+
+.border-primary {
+    border: 2px solid rgb(1, 96, 160);
+}
+
+.bg-none {
+    background: transparent;
+}
+
+.bg-primary {
+    background-color: $bg-primary;
+    color: #fff;
+}
+
+.Btn-Block {
+    display: block;
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.display-1 {
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+.Input-Css {
+    position: relative;
+    padding: 10px;
+    width: 100%;
+    display: block;
+    margin: 5px 0;
+    outline: none !important;
+    border: 1px solid #ccc;
+    border-radius: .4rem;
+}
+
+textarea.Input-Css {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
 }

@@ -95,7 +95,7 @@ table {
      object-fit: cover;
   margin: 0 0 -120px 0;
   border-radius: 50%;
-  z-index: 999;
+  z-index: 2;
   background-color: #fff;
   border: 5px solid white;
   box-shadow: 0 3px 2px 0 rgba(5, 5, 5, 0.233);
@@ -108,4 +108,88 @@ table {
   width: 100%;
   padding: 80px 10px 10px 10px;
   background: #fff;
+}
+.profil .card-box .card-body .wrapper .grid-2 {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  font-family: roboto, "sans-serif";
+}
+.profil .card-box .card-body .wrapper .grid-2 .col-3 {
+  position: relative;
+  padding: 10px;
+  padding: 10px;
+  border-radius: 0.4rem;
+  background-color: #fff;
+  box-shadow: 0 3px 0 2px rgba(255, 255, 255, 0.1);
+}
+@media screen and (max-width: 768px) {
+  .profil .card-box .card-body .wrapper .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+.Button {
+  position: relative;
+  display: inline-block;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin: 10px 0;
+  padding: 8px 10px;
+}
+
+.outline {
+  outline: none !important;
+}
+
+.border-radius {
+  padding: 10px;
+  border-radius: 0.4rem;
+}
+
+.border-primary {
+  border: 2px solid #0160a0;
+}
+
+.bg-none {
+  background: transparent;
+}
+
+.bg-primary {
+  background-color: #0160a0;
+  color: #fff;
+}
+
+.Btn-Block {
+  display: block;
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.display-1 {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.Input-Css {
+  position: relative;
+  padding: 10px;
+  width: 100%;
+  display: block;
+  margin: 5px 0;
+  outline: none !important;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+}
+
+textarea.Input-Css {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 100;
 }/*# sourceMappingURL=scss.css.map */
