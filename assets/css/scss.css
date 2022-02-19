@@ -126,8 +126,18 @@ table {
 }
 @media screen and (max-width: 768px) {
   .profil .card-box .card-body .wrapper .grid-2 {
+    position: relative;
+    width: 100%;
+    padding: 10px;
     display: grid;
     grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 768px) {
+  .profil {
+    position: relative;
+    width: 100%;
+    padding: 10px;
   }
 }
 
@@ -192,4 +202,13 @@ table {
 textarea.Input-Css {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: 100;
+}
+
+@media screen and (max-width: 768px) {
+  .container-fluid, .container-fluid .container {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+  }
 }/*# sourceMappingURL=scss.css.map */
