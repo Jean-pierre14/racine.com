@@ -131,9 +131,6 @@ table {
                     }
                     @media screen and (max-width: 768px) {
                         & {
-                            position: relative;
-                            width: 100%;
-                            padding: 10px;
                             display: grid;
                             grid-template-columns: 1fr;
                         }
@@ -142,10 +139,36 @@ table {
             }
         }
     }
-    @media screen and (max-width: 768px) {
-        position: relative;
-        width: 100%;
-        padding: 10px;
+    @media screen and (max-width: 760px) {
+        & {
+            position: relative;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+     ::-webkit-scrollbar {
+        background: none;
+    }
+     ::-webkit-scrollbar-button {
+        background: none;
+        width: 0;
+        visibility: hidden;
+    }
+     ::-webkit-scrollbar-track {
+        width: 0;
+        background: none;
+    }
+}
+
+.container {
+    position: relative;
+    @media screen and (max-width: 760px) {
+        & {
+            width: 100%;
+            padding: 10px;
+        }
     }
 }
 
@@ -209,15 +232,4 @@ table {
 textarea.Input-Css {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 100;
-}
-
-.container-fluid {
-    @media screen and (max-width: 768px) {
-        &, & .container {
-            position: relative;
-            width: 100%;
-            padding: 10px;
-            margin: 0 auto;
-        }
-    }
 }
