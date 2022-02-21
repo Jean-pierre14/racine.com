@@ -4,7 +4,7 @@ const Envoyer = document.getElementById('Btn-Submit'),
     Em = email.value,
     emailtext = Em.trim,
     msg = message.value,
-    msgTxt = msg.trim()
+    msgTxt = msg.trim
 
 
 Envoyer.onclick = (e) => {
