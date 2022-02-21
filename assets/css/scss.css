@@ -36,12 +36,65 @@ table {
 }
 
 .header-text {
+  position: relative;
   border-radius: 0.4rem 0.4rem 0 0;
   background-color: #0160a0;
   color: #fff;
   padding: 10px 0;
   text-align: center;
   font-weight: 300;
+}
+.header-text::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 80px;
+  height: 2px;
+  background-color: red;
+  -webkit-animation: Width infinite 3s;
+          animation: Width infinite 3s;
+}
+
+@-webkit-keyframes Width {
+  0% {
+    width: 200px;
+  }
+  50% {
+    width: 40px;
+  }
+  100% {
+    width: 200px;
+  }
+}
+
+@keyframes Width {
+  0% {
+    width: 200px;
+  }
+  50% {
+    width: 40px;
+  }
+  100% {
+    width: 200px;
+  }
+}
+.center-img {
+  position: relative;
+  width: 50%;
+  margin: 2rem auto;
+}
+.center-img img {
+  position: relative;
+  width: 100%;
+}
+.center-img span {
+  position: absolute;
+  top: -90px;
+  left: 0;
+  background-color: white;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
 }
 
 .div-img {
@@ -137,6 +190,14 @@ table {
   }
 }
 
+.hidden {
+  display: none;
+}
+
+.font-26 {
+  font-size: 26px;
+}
+
 @media screen and (max-width: 760px) {
   ::-webkit-scrollbar {
     background: none;
@@ -224,4 +285,74 @@ table {
 textarea.Input-Css {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: 100;
+}
+
+.grid-2 {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+table {
+  position: relative;
+  width: 80%;
+  margin: 1rem auto;
+  border-collapse: collapse;
+  overflow-y: auto;
+  padding: 10px;
+  border-radius: 0.4rem;
+}
+@media screen and (max-width: 768px) {
+  table {
+    width: 100%;
+  }
+}
+table thead {
+  padding: 10px;
+  position: relative;
+}
+table thead th {
+  font-family: calibri, sans-serif;
+  background: none;
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #e2e2e2;
+}
+table tbody tr {
+  transition: all 300ms ease;
+}
+table tbody tr td {
+  padding: 10px;
+}
+table tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.205);
+  color: #111;
+}
+table tbody tr td:last-child {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+}
+table tbody tr td:first-child {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+}
+
+.badge {
+  padding: 3px 5px;
+  border-radius: 0.2rem;
+  font-size: 9px;
+  color: #fff;
+  text-align: center;
+}
+
+.danger {
+  background-color: red;
+}
+
+.success {
+  background-color: #00ac00;
+}
+
+.primary {
+  background-color: blue;
 }/*# sourceMappingURL=scss.css.map */

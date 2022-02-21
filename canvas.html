@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <style>
+        *,
+        *::after,
+        *::before {
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        canvas {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="myCanvas" style="background-color: #808080"></canvas>
+    <button id="rotate" type="button" onclick="rotate_ctx()">Rotate Canvas</button>
+
+    <canvas id="canvas2" width="150" height="150" style="background-color: red;"></canvas>
+</body>
+
+<script>
+    var canvas = document.getElementById("myCanvas")
+    var ctx = canvas.getContext("2d")
+    ctx.font = "16px Arial"
+
+    canvas.addEventListener("mousemove", function(e) {
+        var cRect = canvas.getBoundingClientRect()
+        var canvasX = Math.round(e.clientX - cRect.left)
+        var canvasY = Math.round(e.clientY - cRect.top)
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
+        ctx.fillText("X: " + canvasX + ", Y: " + canvasY, 10, 20)
+    })
+
+    const Canv = document.getElementById('canvas2');
+    var c = Canv.getContext('2d');
+    var ox = canvas.width / 2;
+    var oy = canvas.height / 2;
+
+    c.font = '12px serif';
+    c.textAlign = 'center';
+    c.textBaseline = 'middle';
+    c.fillStyle = '#ff2';
+    c.fillText("Hello ", ox, oy);
+
+    function rotate_ctx() {
+        c.translate(ox, oy)
+        c.rotate((Math.PI / 180) * 15)
+        c.fillText('Hello world', 0, 0)
+        c.translate(-ox, -oy)
+    }
+</script>
+
+</html>

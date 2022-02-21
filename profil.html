@@ -59,7 +59,7 @@
                         <div class="wrapper">
                             <div class="grid-2">
                                 <div class="col-9">
-                                    <h3>
+                                    <h3 class="display-1 font-26">
                                         Bienvenu sur mon site
                                     </h3>
                                     <p>
@@ -69,20 +69,20 @@
                                     <p class="hidden">
                                         Comme je me suis présenter dans la page d’accueil, je suis Grace Bisimwa pour mes amis et vous semble être un ami. Donc allons encore plus loin.
                                     </p>
-                                    <button class="Button outline bg-none border-primary border-radius">Lire plus</button>
+                                    <button class="Button outline bg-none border-primary border-radius" id="SH">Lire plus</button>
                                 </div>
                                 <div class="col-3">
                                     <h3 class="text-center display-1">Lasse-moi un message !</h3>
                                     <form action="#" autocomplete="off" method="post">
                                         <div class="group">
                                             <label for="email">E-mail</label>
-                                            <input type="email" required name="email" id="email" placeholder="Entre votre email adress" class="Input-Css">
+                                            <input type="email" name="email" id="email" placeholder="Entre votre email adress" class="Input-Css">
                                         </div>
                                         <div class="group">
-                                            <label for="Message">Message</label>
+                                            <label for="message">Message</label>
                                             <textarea name="message" id="message" class="Input-Css" placeholder="Ecris le message..."></textarea>
                                         </div>
-                                        <button class="Button outline border-radius Btn-Block border-primary bg-primary">Envoyer</button>
+                                        <button type="button" class="Button outline border-radius Btn-Block border-primary bg-primary" id="Btn-Submit">Envoyer</button>
                                     </form>
                                 </div>
                             </div>
@@ -90,6 +90,107 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="content bg-primary">
+        <div class="wrapper">
+            <div class="center-img">
+                <picture>
+                    <source>
+                    <img src="./assets/img/undraw_firmware_re_fgdy.svg" alt="business">
+                </picture>
+                <span></span>
+            </div>
+
+            <h2 class="header-text">Mon business</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nom du Produit</th>
+                        <th>Prix unitaire</th>
+                        <th>Prix total</th>
+                        <th>Stock</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>
+                            Chemise
+                        </td>
+                        <td>
+                            11.5$
+                        </td>
+                        <td>
+                            230 $
+                        </td>
+                        <td>
+                            <span class="badge danger">20</span>
+                        </td>
+                        <td>
+                            Rouge
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            Montre Rolex
+                        </td>
+                        <td>
+                            25.9$
+                        </td>
+                        <td>
+                            25090 $
+                        </td>
+                        <td>
+                            <span class="badge success">100</span>
+                        </td>
+                        <td>
+                            green
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Montre Rolex
+                        </td>
+                        <td>
+                            25.9$
+                        </td>
+                        <td>
+                            25090 $
+                        </td>
+                        <td>
+                            <span class="badge success">100</span>
+                        </td>
+                        <td>
+                            green
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Montre Rolex
+                        </td>
+                        <td>
+                            25.9$
+                        </td>
+                        <td>
+                            25090 $
+                        </td>
+                        <td>
+                            <span class="badge success">100</span>
+                        </td>
+                        <td>
+                            green
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 
@@ -116,9 +217,21 @@
     </div>
 </body>
 
+<script src="./assets/js/validation.js"></script>
 <script src="./assets/js/pdf.js"></script>
 <script src="./assets/js/Animations.js.babel"></script>
+
 <script>
+    // Hidden and show text
+
+    const ButtonSH = document.getElementById('SH')
+
+
+    ButtonSH.onclick = () => {
+        // alert("Clicked") The test event
+        document.querySelector('.hidden').style.display = 'block';
+    }
+
     let d = new Date()
     document.getElementById('year').innerHTML = 'Bisimwa ' + d.getFullYear()
 
