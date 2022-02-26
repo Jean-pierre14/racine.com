@@ -34,3 +34,9 @@ message.onkeyup = () => {
         message.style.border = '2px solid green'
     }
 }
+
+if (email.value.length <= 6) {
+    message.style.visibility = 'hidden'
+} else {
+    message.style.visibility = 'visible'
+}
