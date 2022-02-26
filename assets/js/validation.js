@@ -18,9 +18,19 @@ Envoyer.onclick = (e) => {
     }
 }
 email.onkeyup = () => {
-    if (email !== '') {
-        email.style.border = '1px solid green'
+
+    if (email.value.length <= 5) {
+        email.style.border = '2px solid red'
     } else {
-        email.style.border = '1px solid red'
+        email.style.border = '2px solid green'
+
+    }
+}
+
+message.onkeyup = () => {
+    if (message.value.length <= 5) {
+        message.style.border = '2px solid red'
+    } else {
+        message.style.border = '2px solid green'
     }
 }
