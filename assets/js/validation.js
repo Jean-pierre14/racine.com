@@ -17,3 +17,10 @@ Envoyer.onclick = (e) => {
         alert("Good")
     }
 }
+email.onkeyup = () => {
+    if (email !== '') {
+        email.style.border = '1px solid green'
+    } else {
+        email.style.border = '1px solid red'
+    }
+}
