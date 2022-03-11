@@ -4,6 +4,20 @@
   box-sizing: border-box;
 }
 
+p,
+a,
+span,
+small,
+label,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: calibri;
+}
+
 .content-Center {
   padding: 10px 0;
   position: relative;
@@ -355,5 +369,4 @@ table tbody tr td:first-child {
 
 .primary {
   background-color: blue;
-}
-/*# sourceMappingURL=scss.css.map */
+}/*# sourceMappingURL=scss.css.map */
