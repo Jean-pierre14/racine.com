@@ -4,18 +4,31 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,400;1,500;1,700;1,900&display=swap');
 $White: #fff;
 $padding: 10px;
 .content-Center {
     padding: 10px 0;
     position: relative;
     width: 70%;
+    // background-color: rgba(53, 88, 104, 0.7);
     margin: 0 auto;
     .Row {
         position: relative;
         display: grid;
         grid-template-columns: 1fr 3fr;
         grid-gap: 10px;
+    }
+    @media screen and(max-width: 768px) {
+        & {
+            width: 100%;
+            margin: 0;
+            .Row {
+                width: 100%;
+                margin: 50px auto;
+                grid-template-columns: 1fr;
+            }
+        }
     }
 }
 
@@ -48,6 +61,12 @@ table {
 
 .div-img {
     position: relative;
+    display: block;
+    width: 100%;
+    img {
+        position: relative;
+        width: 100%;
+    }
 }
 
 .box-Content {
@@ -64,4 +83,184 @@ table {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+#results {
+    position: relative;
+    z-index: 2;
+    padding: 10px;
+    border-radius: .4rem;
+    background: #fff;
+    box-shadow: 3px 0px 27px -1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 3px 0px 27px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 0px 27px -1px rgba(0, 0, 0, 0.75);
+    background-color: linear-gradient(to right bottom, rbga(255, 255, 255, 0.7), rgba(255, 255, 255, 0.103));
+    backdrop-filter: blur(20rem);
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: roboto;
+    }
+    &::before {
+        position: absolute;
+        content: "";
+        z-index: 0;
+        top: -25px;
+        right: -25px;
+        width: 100px;
+        height: 100px;
+        background-color: #fff;
+    }
+    @media screen and (max-width: 768px) {
+        & {
+            box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0);
+        }
+    }
+}
+
+.element {
+    position: relative;
+    display: block;
+    padding: 10px;
+    margin: 15px auto;
+    background: rgb(236, 236, 236);
+    border-radius: .4rem;
+}
+
+.content-center-box {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    .box-center {
+        position: relative;
+        // width: 30%;
+        margin: 0 auto;
+        background: #ccc;
+        padding: 5px 20px;
+        border-radius: .4rem;
+        background-color: linear-gradient(to right bottom, rgba(255, 255, 245, 0.5), rgba(255, 255, 255, 0.2));
+        .group {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            .Button {
+                padding: 10px 15px;
+                background: none;
+                outline: none;
+                border: none;
+                background-color: #fff;
+                cursor: pointer;
+                transition: all 0.3s ease-in;
+                &.active {
+                    background-color: #111;
+                    color: #fff;
+                }
+            }
+            .one {
+                border-top-left-radius: .4rem;
+                border-bottom-left-radius: .4rem;
+            }
+            .second {
+                border-top-right-radius: .4rem;
+                border-bottom-right-radius: .4rem;
+            }
+        }
+    }
+}
+
+.box-elmts {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    &>div {
+        position: relative;
+        background: #ccc;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin: 0 auto;
+        padding: 10px;
+        min-width: 200px;
+        min-height: 200px;
+        border-radius: .4rem;
+        cursor: pointer;
+        h3 {
+            text-align: center;
+        }
+        .icon {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto;
+            object-fit: cover;
+        }
+    }
+    @media screen and(max-width: 768px) {
+        & {
+            position: relative;
+            background: #ccc;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 2rem;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 5px;
+            &>div {
+                margin: 10px auto;
+            }
+        }
+        .icon {
+            display: block;
+            width: 250px;
+        }
+    }
+}
+
+.icon {
+    position: relative;
+    width: 100%;
+}
+
+.h-text {
+    margin: 10px 0;
+    text-decoration: underline;
+    // border-bottom: 2px solid rgb(238, 238, 238);
+}
+
+.content-main {
+    position: relative;
+    background: #fff;
+    background-image: url(../img/plantyn_primaire_francais_subject-header.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    backdrop-filter: blur(20rem);
+}
+
+.circle-1,
+.circle-2 {
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    background: #fff;
+    background-color: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
 }
