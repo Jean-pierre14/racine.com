@@ -105,7 +105,7 @@ table {
   font-family: roboto;
 }
 #results::before {
-  position: absolute;
+  position: fixed;
   content: "";
   z-index: 0;
   top: -25px;
