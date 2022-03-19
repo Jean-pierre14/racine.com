@@ -114,6 +114,11 @@ table {
         width: 100px;
         height: 100px;
         background-color: #fff;
+        @media screen and (max-width: 768px) {
+            & {
+                display: none;
+            }
+        }
     }
     @media screen and (max-width: 768px) {
         & {
