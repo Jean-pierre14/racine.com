@@ -34,7 +34,7 @@
   font-family: calibri, Arial, "sans-serif" !important;
   display: block;
   text-align: center;
-  color: #1d1c1d;
+  color: rgb(29, 28, 29);
   padding: 10px;
   border: 2px solid rgba(255, 0, 0, 0.473);
   border-radius: 0.4rem;
@@ -49,7 +49,7 @@ table {
 
 .header-text {
   border-radius: 0.4rem 0.4rem 0 0;
-  background-color: #0160a0;
+  background-color: rgb(1, 96, 160);
   color: #fff;
   padding: 10px 0;
   text-align: center;
@@ -130,7 +130,7 @@ table {
   display: block;
   padding: 10px;
   margin: 15px auto;
-  background: #ececec;
+  background: rgb(236, 236, 236);
   border-radius: 0.4rem;
 }
 
@@ -267,4 +267,57 @@ table {
   background: #fff;
   background-color: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
 }
-/*# sourceMappingURL=scss.css.map */
+
+.grid {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 10px auto;
+}
+.grid::before {
+  content: "";
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  box-shadow: 25px 25px 50px rgba(0, 0, 0, 0.05);
+}
+.grid .box {
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.grid .box div:nth-child(1) {
+  position: relative;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  border-radius: 1rem 0 0 1rem;
+  font-family: arial;
+}
+.grid .box div:nth-child(2) {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 1rem 1rem 0;
+}
+.grid .box img {
+  display: block;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .grid .box {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .grid .box div:nth-child(1) {
+    border-radius: 1rem 1rem 0 0;
+  }
+  .grid .box div:nth-child(2) {
+    border-radius: 0 0 1rem 1rem;
+  }
+}/*# sourceMappingURL=scss.css.map */
