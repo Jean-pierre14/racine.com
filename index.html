@@ -9,11 +9,8 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="shortcut icon" href="./assets/img/racine14.jpg" type="image/x-icon">
 </head>
 
@@ -105,16 +102,11 @@
                         </div>
                         <div class="Card-Body padding-20">
                             <p>
-                                <span>Bonjour,</span><br>
-                                Je suis <b>CHIRUZA BISIMWA <i>Grace</i></b> né à Goma <b>le 14 Avril</b>...
-                                Je suis Congolais, fils ainé d’une famille de dix enfants, dont huit garçons et deux filles.
-                                Je suis à présent célibataire et enseignant à <b>l’école internationale Isoko La SOURCE</b> au
-                                Rwanda/Rubavu/Gisenyi. J’y
-                                enseigne le <b>français et les technologies informatique</b>.
+                                <span>Bonjour,</span><br> Je suis <b>CHIRUZA BISIMWA <i>Grace</i></b> né à Goma <b>le 14 Avril</b>... Je suis Congolais, fils ainé d’une famille de dix enfants, dont huit garçons et deux filles. Je suis à présent célibataire
+                                et enseignant à <b>l’école internationale Isoko La SOURCE</b> au Rwanda/Rubavu/Gisenyi. J’y enseigne le <b>français et les technologies informatique</b>.
                             </p>
                             <p>
-                                J’ai fait mes études universitaire a L’Université Libre de Kigali ULK en single. Et actuellement je suis en train
-                                d’étudié le Master of Administrative Business toujours à L’ULK.
+                                J’ai fait mes études universitaire a L’Université Libre de Kigali ULK en single. Et actuellement je suis en train d’étudié le Master of Administrative Business toujours à L’ULK.
                             </p><br>
                         </div>
                     </div>
@@ -123,9 +115,8 @@
                             <h3>Objectif du site</h3>
                         </div>
                         <div class="Card-Body padding-20">
-                            <p><u>L’objectif de ce site</u> est juste de vous montre de quoi je suis capable dans le monde informatique mais cela ne suffit
-                            pas parce que ce site est le un dixième de ce peut faire un ingénieur en science informatique, merci de me tenir
-                            informer s’il y à modifier !</p>
+                            <p><u>L’objectif de ce site</u> est juste de vous montre de quoi je suis capable dans le monde informatique mais cela ne suffit pas parce que ce site est le un dixième de ce peut faire un ingénieur en science informatique, merci
+                                de me tenir informer s’il y à modifier !</p>
                         </div>
                     </div>
                     <div class="Card">
@@ -291,81 +282,85 @@
 
 <script>
     const SubscribeBtn = document.getElementById('SubscribeBtn');
-    
 
     SubscribeBtn.onclick = () => {
         let Email = document.querySelector('#emailAbonner').value
         const form = document.getElementById('Form')
         emailText = Email.trim()
-        if(emailText != ''){
-            console.log("Abonner "+emailText)
+        if (emailText != '') {
+            console.log("Abonner " + emailText)
             let xhr = new XMLHttpRequest()
-            xhr.onload = () =>{
-                if(xhr.readyState === XMLHttpRequest.DONE){
-                    if(xhr.status === 200){
+            xhr.onload = () => {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
                         let data = xhr.response
-                        // console.log(data)
+                            // console.log(data)
                     }
                 }
             }
-            xhr.open("POST","http://localhost:7000/suscribe/", true)
+            xhr.open("POST", "http://localhost:7000/suscribe/", true)
             let formData = new FormData(form)
             xhr.send(formData)
-        }else{
+        } else {
             alert('Email is empty')
         }
-        
+
     }
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script> // Config and customizing of the chartjss
+<script>
+    // Config and customizing of the chartjss
     let d = new Date()
     document.getElementById('year').innerHTML = 'Bisimwa ' + d.getFullYear()
     const ctx = document.getElementById('myChart').getContext('2d');
     const myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Excel', 'Word', 'PhotoShop', 'Illustrator', 'Driving', 'Collaboration'],
-        datasets: [{
-            label: '# Capacities',
-            data: [67, 70, 89, 50, 90, 63],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
+        type: 'bar',
+        data: {
+            labels: ['Excel', 'Word', 'PhotoShop', 'Illustrator', 'Driving', 'Collaboration'],
+            datasets: [{
+                label: '# Capacities',
+                data: [67, 70, 89, 50, 90, 63],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
             }
         }
-    }
-});
+    });
 </script>
 <script>
     function initMap() {
         const options = {
-            center: { lat: 1.9441, lng: 30.0619 },
+            center: {
+                lat: 1.9441,
+                lng: 30.0619
+            },
             zoom: 14
         }
         const map = google.maps.Map(document.getElementById('map'), options)
     }
+
     function Comments() {
         let output = 'Loading...'
         fetch('https://jsonplaceholder.typicode.com/comments')
@@ -404,11 +399,9 @@
             .catch(e => console.log(e))
     }
     Comments()
-
 </script>
 <script src="./assets/js/Animations.js.babel"></script>
 <script src="./assets/js/api.js"></script>
-<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfsrBR4BN3ZknC21eDw2yrDHkJBk0gaMM&callback=initMap"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfsrBR4BN3ZknC21eDw2yrDHkJBk0gaMM&callback=initMap"></script>
 
 </html>
