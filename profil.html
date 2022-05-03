@@ -16,7 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 
-<body>
+<body id="body">
     <nav class="Navbar">
         <div class="topBar-Left">
             <a href="index.html" class="logo">Mr. BISIMWA</a>
@@ -26,7 +26,7 @@
                 <label for="search">
                     <i class="fas fa-search"></i>
                 </label>
-                <input type="text" autocomplete="off" id="search" class="input" placeholder="Search...">
+                <input type="text" autocomplete="off" id="inputSearch" class="input" placeholder="Search...">
             </div>
         </div>
         <div class="topBar-Right">
@@ -54,7 +54,10 @@
                             <div>
                                 <h2><b>CHIRUZA BISIMWA</b> <i>Grace</i></h2>
                                 <p>
-                                    Welcome to my portfolio... <br> I'm Grace El Bisimwa. Congolese from DRC/Kishansa
+                                    Bienvenu sur mon portfolio <sup>Racine14</sup>,
+                                </p>
+                                <p>
+                                    <b>Racine14~</b> studio est ma marque a moi
                                 </p>
                             </div>
                             <div>
@@ -100,11 +103,49 @@
             </div>
         </div>
     </div>
+
+    <div class="searchContent">
+        <div class="center">
+            <div class="button-close">
+                <button class="buttonClose-center" title="Fermer le moteur de recherche">X</button>
+            </div>
+            <div class="box">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, aperiam. Consectetur eos reiciendis sint adipisci sapiente veritatis, voluptates dignissimos saepe, doloremque expedita accusamus exercitationem rem eaque quo cupiditate repellat amet?
+                </p>
+            </div>
+
+            <div class="box">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, aperiam. Consectetur eos reiciendis sint adipisci sapiente veritatis, voluptates dignissimos saepe, doloremque expedita accusamus exercitationem rem eaque quo cupiditate repellat amet?
+                </p>
+            </div>
+        </div>
+    </div>
 </body>
 
 <script src="./assets/js/pdf.js"></script>
 <script src="./assets/js/Animations.js.babel"></script>
 <script>
+    // Search Engine
+    const inputSearch = document.getElementById('inputSearch'),
+        SearchContent = document.querySelector('.searchContent')
+
+    inputSearch.onkeyup = () => {
+
+        const text = inputSearch.value
+
+        const txt = text.trim()
+
+        if (txt !== '') {
+            SearchContent.style.display = 'block'
+        } else {
+            SearchContent.style.display = 'none'
+        }
+
+    }
+
+
     let d = new Date()
     document.getElementById('year').innerHTML = 'Bisimwa ' + d.getFullYear()
 

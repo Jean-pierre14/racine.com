@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jean-Pierre14</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/scss.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -24,7 +25,7 @@
                 <label for="search">
                     <i class="fas fa-search"></i>
                 </label>
-                <input type="text" autocomplete="off" id="search" class="input" placeholder="Search...">
+                <input type="text" autocomplete="off" autofocus id="inputSearch" class="input" placeholder="Search...">
             </div>
         </div>
         <div class="topBar-Right">
@@ -278,6 +279,25 @@
             </div>
         </div>
     </div>
+
+    <div class="searchContent">
+        <div class="center">
+            <div class="button-close">
+                <button type="button" class="buttonClose-center" title="Fermer le moteur de recherche">X</button>
+            </div>
+            <div class="box">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, aperiam. Consectetur eos reiciendis sint adipisci sapiente veritatis, voluptates dignissimos saepe, doloremque expedita accusamus exercitationem rem eaque quo cupiditate repellat amet?
+                </p>
+            </div>
+
+            <div class="box">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, aperiam. Consectetur eos reiciendis sint adipisci sapiente veritatis, voluptates dignissimos saepe, doloremque expedita accusamus exercitationem rem eaque quo cupiditate repellat amet?
+                </p>
+            </div>
+        </div>
+    </div>
 </body>
 
 <script>
@@ -310,6 +330,30 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
+    // Search Engine
+    const inputSearch = document.getElementById('inputSearch'),
+        SearchContent = document.querySelector('.searchContent'),
+        buttonClose = document.querySelector('.buttonClose-center')
+
+    inputSearch.onkeyup = () => {
+
+        const text = inputSearch.value
+
+        const txt = text.trim()
+
+        if (txt !== '') {
+            SearchContent.style.display = 'block'
+        } else {
+            SearchContent.style.display = 'none'
+        }
+
+    }
+
+    buttonClose.onclick = () => {
+        SearchContent.style.display = 'none'
+        inputSearch.value = ''
+    }
+
     // Config and customizing of the chartjss
     let d = new Date()
     document.getElementById('year').innerHTML = 'Bisimwa ' + d.getFullYear()
