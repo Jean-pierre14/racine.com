@@ -392,4 +392,15 @@ table {
   overflow: hidden;
   padding: 1rem;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+}
+.grid-2 video {
+  width: 100%;
+  border-radius: 0.4rem;
+  background-color: rgba(17, 17, 17, 0.408);
 }/*# sourceMappingURL=scss.css.map */

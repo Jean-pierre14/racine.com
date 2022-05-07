@@ -395,3 +395,14 @@ table {
         }
     }
 }
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    video {
+        width: 100%;
+        border-radius: .4rem;
+        background-color: rgba(17, 17, 17, 0.408);
+    }
+}
