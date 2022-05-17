@@ -407,3 +407,53 @@ table {
         background-color: rgba(17, 17, 17, 0.408);
     }
 }
+
+.container-dashboard {
+    position: relative;
+    margin: 50px auto;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    .content-center-dashboard {
+        width: 70%;
+        height: 500px;
+        margin: 0 auto;
+        background: #fff;
+        background: linear-gradient(to left top, rgba(255, 255, 255, 0.396), rgba(255, 255, 255, 0.478));
+        backdrop-filter: blur(40px);
+        border-radius: .4rem;
+        display: grid;
+        grid-template-columns: 1.5fr 4fr;
+        .dashbord-dashboard {
+            position: relative;
+            width: 100%;
+            background-color: #fff;
+            border-radius: .4rem 0 0 .4rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            .img-box-center {
+                position: relative;
+                width: 50%;
+                margin: 0 auto;
+                .profil-img-dashboard {
+                    position: relative;
+                    width: 7.5rem;
+                    height: 7.5rem;
+                    margin: 0 auto;
+                    border-radius: 50%;
+                    background-color: #ccc;
+                    object-fit: cover;
+                }
+            }
+        }
+        .section {
+            padding: .4rem;
+        }
+        &:nth-child(2) {
+            position: relative;
+            flex: 9;
+        }
+    }
+}
