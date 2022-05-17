@@ -398,6 +398,7 @@ table {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2em;
+  margin: 2rem auto;
 }
 .grid-2 video {
   width: 100%;
