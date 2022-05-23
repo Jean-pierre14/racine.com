@@ -453,6 +453,7 @@ table {
                 li {
                     display: flex;
                     justify-content: space-between;
+                    align-items: center;
                     margin: 10px 0;
                     cursor: pointer;
                     padding: 1rem;
@@ -463,6 +464,8 @@ table {
                         width: 32px;
                         height: 32px;
                         object-fit: cover;
+                        border-radius: 50%;
+                        margin: 0 50px 0 0;
                     }
                 }
             }
