@@ -450,6 +450,25 @@ table {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.container-dashboard .content-center-dashboard .dashbord-dashboard ul {
+  position: relative;
+  list-style: none;
+}
+.container-dashboard .content-center-dashboard .dashbord-dashboard ul li {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.container-dashboard .content-center-dashboard .dashbord-dashboard .center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+}
 .container-dashboard .content-center-dashboard .section {
   padding: 0.4rem;
 }

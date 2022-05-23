@@ -447,6 +447,25 @@ table {
                     object-fit: cover;
                 }
             }
+            ul {
+                position: relative;
+                list-style: none;
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 10px 0;
+                    cursor: pointer;
+                    padding: 1rem;
+                    border-radius: .4rem;
+                    background-color: rgba(0, 0, 0, 0.3);
+                }
+            }
+            .center {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin: 10px auto;
+            }
         }
         .section {
             padding: .4rem;
