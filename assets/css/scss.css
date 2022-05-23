@@ -463,6 +463,13 @@ table {
   border-radius: 0.4rem;
   background-color: rgba(0, 0, 0, 0.3);
 }
+.container-dashboard .content-center-dashboard .dashbord-dashboard ul li img {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .container-dashboard .content-center-dashboard .dashbord-dashboard .center {
   width: 100%;
   display: flex;
