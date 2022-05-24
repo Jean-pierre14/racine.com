@@ -478,6 +478,44 @@ table {
         }
         .section {
             position: relative;
+            .wrapper {
+                display: block;
+                position: relative;
+                .element {
+                    position: relative;
+                    width: 100%;
+                    padding: 10px;
+                    background: rbga(255, 255, 255, 0.9);
+                    border-radius: .4rem;
+                    display: grid;
+                    grid-template-columns: 1fr 3fr 1fr;
+                    justify-content: center;
+                    align-items: center;
+                    align-content: center;
+                    .item-1 {
+                        position: relative;
+                        width: 100%;
+                        // background-color: #000;
+                        .img-box {
+                            width: 80%;
+                            margin: 0 auto;
+                            position: relative;
+                            background-color: #fff;
+                            position: relative;
+                            overflow: hidden;
+                            padding: 10px;
+                            border-radius: .4rem;
+                            img {
+                                position: relative;
+                                width: 100px;
+                                height: 100px;
+                                margin: 0 auto;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                }
+            }
         }
         &:nth-child(2) {
             position: relative;

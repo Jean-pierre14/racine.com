@@ -482,6 +482,44 @@ table {
 .container-dashboard .content-center-dashboard .section {
   position: relative;
 }
+.container-dashboard .content-center-dashboard .section .wrapper {
+  display: block;
+  position: relative;
+}
+.container-dashboard .content-center-dashboard .section .wrapper .element {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  background: rbga(255, 255, 255, 0.9);
+  border-radius: 0.4rem;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.container-dashboard .content-center-dashboard .section .wrapper .element .item-1 {
+  position: relative;
+  width: 100%;
+}
+.container-dashboard .content-center-dashboard .section .wrapper .element .item-1 .img-box {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+  border-radius: 0.4rem;
+}
+.container-dashboard .content-center-dashboard .section .wrapper .element .item-1 .img-box img {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .container-dashboard .content-center-dashboard:nth-child(2) {
   position: relative;
   flex: 9;
