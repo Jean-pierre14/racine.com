@@ -456,13 +456,13 @@ table {
                     align-items: center;
                     margin: 10px 0;
                     cursor: pointer;
-                    padding: 1rem;
+                    padding: 8px 15px;
                     border-radius: .4rem;
                     background-color: rgba(0, 0, 0, 0.3);
                     img {
                         position: relative;
-                        width: 32px;
-                        height: 32px;
+                        width: 30px;
+                        height: 30px;
                         object-fit: cover;
                         border-radius: 50%;
                         margin: 0 50px 0 0;
@@ -477,7 +477,7 @@ table {
             }
         }
         .section {
-            padding: .4rem;
+            position: relative;
         }
         &:nth-child(2) {
             position: relative;

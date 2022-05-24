@@ -460,14 +460,14 @@ table {
   align-items: center;
   margin: 10px 0;
   cursor: pointer;
-  padding: 1rem;
+  padding: 8px 15px;
   border-radius: 0.4rem;
   background-color: rgba(0, 0, 0, 0.3);
 }
 .container-dashboard .content-center-dashboard .dashbord-dashboard ul li img {
   position: relative;
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
@@ -480,7 +480,7 @@ table {
   margin: 10px auto;
 }
 .container-dashboard .content-center-dashboard .section {
-  padding: 0.4rem;
+  position: relative;
 }
 .container-dashboard .content-center-dashboard:nth-child(2) {
   position: relative;
