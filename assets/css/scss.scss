@@ -481,36 +481,37 @@ table {
             .wrapper {
                 display: block;
                 position: relative;
+                padding: 20px;
                 .element {
                     position: relative;
                     width: 100%;
                     padding: 10px;
-                    background: rbga(255, 255, 255, 0.9);
+                    background: #fff;
                     border-radius: .4rem;
                     display: grid;
-                    grid-template-columns: 1fr 3fr 1fr;
+                    grid-template-columns: 1.5fr 3fr 1fr;
                     justify-content: center;
                     align-items: center;
                     align-content: center;
                     .item-1 {
                         position: relative;
                         width: 100%;
+                        display: block;
                         // background-color: #000;
                         .img-box {
                             width: 80%;
                             margin: 0 auto;
                             position: relative;
-                            background-color: #fff;
                             position: relative;
                             overflow: hidden;
-                            padding: 10px;
                             border-radius: .4rem;
                             img {
                                 position: relative;
-                                width: 100px;
-                                height: 100px;
+                                width: 90px;
+                                height: 90px;
                                 margin: 0 auto;
                                 object-fit: cover;
+                                border-radius: 50%;
                             }
                         }
                     }
