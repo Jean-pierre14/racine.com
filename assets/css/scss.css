@@ -421,6 +421,7 @@ table {
   margin: 0 auto;
   background: #fff;
   background: linear-gradient(to left top, rgba(255, 255, 255, 0.396), rgba(255, 255, 255, 0.478));
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.05);
   -webkit-backdrop-filter: blur(40px);
           backdrop-filter: blur(40px);
   border-radius: 0.4rem;
