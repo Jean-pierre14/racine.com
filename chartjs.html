@@ -9,11 +9,8 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="shortcut icon" href="./assets/img/racine14.jpg" type="image/x-icon">
 </head>
 
@@ -27,15 +24,13 @@
                 <label for="search">
                     <i class="fas fa-search"></i>
                 </label>
-                <input type="text" autocomplete="off" id="search" class="input" placeholder="Search...">
+                <input type="text" autocomplete="off" autofocus id="inputSearch" class="input" placeholder="Search...">
             </div>
         </div>
         <div class="topBar-Right">
             <ul class="list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="profil.html">Profil</a></li>
-                <li><a href="moncv.html">My C.V</a></li>
-                <li><a href="me.html">About me</a></li>
                 <li><a href="chartjs.html" class="active">Data</a></li>
             </ul>
             <img src="./assets/img/racine14.jpg" alt="Profi img" class="img-profil">
@@ -62,13 +57,13 @@
                 <p>
                     Users List
                 </p>
-                
+
                 <div id="results">
                     <p>
                         Loading...
                     </p>
                 </div>
-                
+
             </div>
             <div class="Side-Center">
                 <div class="Datas-Center">
@@ -76,7 +71,7 @@
                         <div class="Card-Body">
                             <canvas id="myChart1" width="200" height=""></canvas>
                         </div>
-                    </div> 
+                    </div>
                 </div>
             </div>
             <div class="Side-Right">
@@ -98,101 +93,13 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         const ctx = document.getElementById('myChart1').getContext('2d');
-            const myChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['Adobe', 'French', 'English', 'Driving', 'Stastics', 'Collaboration'],
-                    datasets: [{
-                        label: '# Competences',
-                        data: [78, 89.7, 67, 56, 98, 90],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
-            });
-    </script><script src="./assets/js/Animations.js.babel"></script>
-
-<script>
-    SelectAll()
-    function SelectAll(){
-        // User Fetch Api form nodejs and mysql
-        fetch('http://localhost:7000/students')
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-                if (data.data.length > 0) { // Dear Grace be careful about your data. You have to check within you console
-                    // console.log('We have')
-                    let out = ''
-                    out += '<ul class="Gr-List">'
-                    data.data.forEach((user) => {
-                        out += `
-                    <li class="List-User">
-                        <a href="javascript:void()" class="List-User" id="${user.id}">
-                            <span>
-                                <img src="./assets/img/undraw_teaching_f-1-cm.svg" alt="Friends img" class="img-profil" />
-                            </span>
-                            <span>
-                                ${user.fullname}
-                            </span>
-                            <span>
-                                <i class="fa fa-signal"></i>
-                            </span>
-                        </a>
-                    </li>
-                    `
-                    })
-                    out += '</ul>'
-                    document.getElementById('results').innerHTML = out
-                } else {
-                    console.log('No data')
-                }
-            })
-            .catch(e => console.log(e))
-    }
-
-
-    let Get = document.querySelectorAll('.List-User')
-    Get.addEventListener('click', function(){
-        alert("Click")
-    })
-
-
-    var s = document.getElementById('type').value
-    function Onchange(){
-        let as = document.forms[0].type.value
-        let setUp = s
-        // alert(setUp)
-        const ctx = document.getElementById('myChart').getContext('2d');
         const myChart = new Chart(ctx, {
-            type: `${as}`,
-            type: 'Pie',
+            type: 'bar',
             data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                labels: ['Adobe', 'French', 'English', 'Driving', 'Stastics', 'Collaboration'],
                 datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
+                    label: '# Competences',
+                    data: [78, 89.7, 67, 56, 98, 90],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
@@ -220,10 +127,99 @@
                 }
             }
         });
-    }
+    </script>
+    <script src="./assets/js/Animations.js.babel"></script>
+
+    <script>
+        SelectAll()
+
+        function SelectAll() {
+            // User Fetch Api form nodejs and mysql
+            fetch('http://localhost:7000/students')
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    if (data.data.length > 0) { // Dear Grace be careful about your data. You have to check within you console
+                        // console.log('We have')
+                        let out = ''
+                        out += '<ul class="Gr-List">'
+                        data.data.forEach((user) => {
+                            out += `
+                    <li class="List-User">
+                        <a href="javascript:void()" class="List-User" id="${user.id}">
+                            <span>
+                                <img src="./assets/img/undraw_teaching_f-1-cm.svg" alt="Friends img" class="img-profil" />
+                            </span>
+                            <span>
+                                ${user.fullname}
+                            </span>
+                            <span>
+                                <i class="fa fa-signal"></i>
+                            </span>
+                        </a>
+                    </li>
+                    `
+                        })
+                        out += '</ul>'
+                        document.getElementById('results').innerHTML = out
+                    } else {
+                        console.log('No data')
+                    }
+                })
+                .catch(e => console.log(e))
+        }
 
 
-</script>
+        let Get = document.querySelectorAll('.List-User')
+        Get.addEventListener('click', function() {
+            alert("Click")
+        })
+
+
+        var s = document.getElementById('type').value
+
+        function Onchange() {
+            let as = document.forms[0].type.value
+            let setUp = s
+                // alert(setUp)
+            const ctx = document.getElementById('myChart').getContext('2d');
+            const myChart = new Chart(ctx, {
+                type: `${as}`,
+                type: 'Pie',
+                data: {
+                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                    datasets: [{
+                        label: '# of Votes',
+                        data: [12, 19, 3, 5, 2, 3],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+    </script>
 
 </body>
 
