@@ -9,11 +9,8 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="shortcut icon" href="./assets/img/racine14.jpg" type="image/x-icon">
 </head>
 
@@ -27,15 +24,13 @@
                 <label for="search">
                     <i class="fas fa-search"></i>
                 </label>
-                <input type="text" autocomplete="off" id="search" class="input" placeholder="Search...">
+                <input type="text" autocomplete="off" autofocus id="inputSearch" class="input" placeholder="Search...">
             </div>
         </div>
         <div class="topBar-Right">
             <ul class="list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="profil.html" class="active">Profil</a></li>
-                <li><a href="moncv.html">My C.V</a></li>
-                <li><a href="me.html">About me</a></li>
                 <li><a href="chartjs.html">Data</a></li>
             </ul>
             <img src="./assets/img/racine14.jpg" alt="Profi img" class="img-profil">
@@ -130,16 +125,17 @@
 <script>
     function initMap() {
         const mapOptions = {
-            center: { lat: -37.3159, lng: 81.1496 },
+            center: {
+                lat: -37.3159,
+                lng: 81.1496
+            },
             zoom: 8
         };
         const map = new google.maps.Map(document.getElementById('map', mapOptions))
     }
-
 </script>
 <script src="./assets/js/Animations.js.babel"></script>
-<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfsrBR4BN3ZknC21eDw2yrDHkJBk0gaMM&callback=initMap"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfsrBR4BN3ZknC21eDw2yrDHkJBk0gaMM&callback=initMap"></script>
 <script src="./assets/js/api.js"></script>
 
 </html>

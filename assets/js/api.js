@@ -1,8 +1,9 @@
-const d = new Date();
-document.getElementById("year").textContent = d.getFullYear();
+"use strick";
 
 let output = "";
+
 const paragraph = document.getElementById("Datas");
+
 if (paragraph) {
     paragraph.innerHTML = "Loading...";
 }
@@ -15,18 +16,18 @@ fetch("https://jsonplaceholder.typicode.com/todos")
             let output = "";
             json.forEach((u) => {
                 output += `
-        <div class="Card">
-          <div class="Card-Header">
-            <h3 class="d-flex justify-content-between">Username <a href="#${u.userId}">${u.id}</a></h3>
-          </div>
-          <div class="Card-Body padding-5">
-            <p>${u.title}</p>
-          </div>
-          <div class="Card-Footer">
-            <button type="button" class="button btn btn-success">${u.completed}</button>
-          </div>
-        </div>
-        `;
+                <div class="Card">
+                  <div class="Card-Header">
+                    <h3 class="d-flex justify-content-between">Username <a href="#${u.userId}">${u.id}</a></h3>
+                  </div>
+                  <div class="Card-Body padding-5">
+                    <p>${u.title}</p>
+                  </div>
+                  <div class="Card-Footer">
+                    <button type="button" class="button btn btn-success">${u.completed}</button>
+                  </div>
+                </div>
+            `;
             });
             if ((paragraph.innerHTML = "")) {
                 paragraph.innerHTML = "Loading";
@@ -45,18 +46,18 @@ fetch("https://jsonplaceholder.typicode.com/users")
     .then((res) => res.json())
     .then((json) => {
         if (json.length > 0) {
-            // data = "";
+            data = "";
             json.forEach((user) => {
                 data += `
-        <li>
-          <a href="user.html?get=${user.id}">
-              <span>
-                  <img src="./assets/img/racine14.jpg" alt="Friends img" class="img-profil" />
-              </span>
-              <span>${user.name}</span>
-          </a>
-      </li>
-        `;
+                <li>
+                  <a href="user.html?get=${user.id}">
+                      <span>
+                          <img src="./assets/img/racine14.jpg" alt="Friends img" class="img-profil" />
+                      </span>
+                      <span>${user.name}</span>
+                  </a>
+              </li>
+              `;
             });
         } else {
             data = '<p class="info danger">There no data</p>';

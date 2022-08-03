@@ -42,6 +42,7 @@
             </button>
         </div>
     </nav>
+
     <div class="container-fluid margin--top">
         <div class="main">
             <div class="Side-Left">
@@ -299,12 +300,28 @@
 </body>
 
 <script>
+    const DatasUsers = document.getElementById('Datas-users');
+    const DataUser = () => {
+        fetch("./db.json")
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
+            .catch(e => console.log(e));
+    }
+    DataUser();
+
+
     const SubscribeBtn = document.getElementById('SubscribeBtn');
 
     SubscribeBtn.onclick = () => {
-        let Email = document.querySelector('#emailAbonner').value
-        const form = document.getElementById('Form')
-        emailText = Email.trim()
+
+        let Email = document.querySelector('#emailAbonner').value;
+
+        const form = document.getElementById('Form');
+
+        emailText = Email.trim();
+
         if (emailText != '') {
             console.log("Abonner " + emailText)
             let xhr = new XMLHttpRequest()
@@ -353,7 +370,7 @@
     }
 
     // Config and customizing of the chartjss
-    let d = new Date()
+    let d = new Date();
     document.getElementById('year').innerHTML = 'Bisimwa ' + d.getFullYear()
     const ctx = document.getElementById('myChart').getContext('2d');
     const myChart = new Chart(ctx, {
@@ -404,8 +421,7 @@
     }
 
     function Comments() {
-        let output = 'Loading...'
-        fetch('https://jsonplaceholder.typicode.com/comments')
+        fetch('https://jsonplaceholder.typicode.com/comments?_limit=10')
             .then(res => res.json())
             .then(data => {
                 if (data.length > 0) {
@@ -438,9 +454,9 @@
                 }
                 document.getElementById('Datas-comments').innerHTML = output
             })
-            .catch(e => console.log(e))
+            .catch(e => console.log(e));
     }
-    Comments()
+    Comments();
 </script>
 <script src="./assets/js/Animations.js.babel"></script>
 <script src="./assets/js/api.js"></script>
