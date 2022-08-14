@@ -354,7 +354,7 @@
 
         const text = inputSearch.value
 
-        const txt = text.trim()
+        const txt = text.trim();
 
         if (txt !== '') {
             SearchContent.style.display = 'block'
@@ -454,7 +454,10 @@
                 }
                 document.getElementById('Datas-comments').innerHTML = output
             })
-            .catch(e => console.log(e));
+            .catch(e => {
+                console.log(e);
+                document.getElementById('Datas-comments').innerHTML = `<p class="ErrorNet">Error ${e}</p>`;
+            });
     }
     Comments();
 </script>

@@ -65,7 +65,7 @@ fetch("https://jsonplaceholder.typicode.com/users")
         UsersDom.innerHTML = data;
     })
     .catch((e) => {
-        UsersDom.innerHTML = `<p class="ErrorNet">Loading...</p>`;
+        UsersDom.innerHTML = `<p class="ErrorNet">Networking...</p>`;
         console.log(e);
     });
 
