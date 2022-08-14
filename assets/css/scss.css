@@ -24,6 +24,10 @@ body {
   background-color: red;
 }
 
+.wrapper {
+  max-width: 1440px;
+}
+
 .content-Center {
   padding: 10px 0;
   position: relative;
