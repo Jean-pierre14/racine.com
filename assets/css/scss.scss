@@ -8,6 +8,7 @@
 
 $red: red;
 $white: #fff;
+$Raduis: .4rem;
 body {
     padding: 0;
     display: block;
@@ -26,8 +27,16 @@ $White: #fff;
 $padding: 10px;
 .wrapper {
     max-width: 1440px;
-    height: 100vh - 50px;
+    height: calc(100vh - 50px);
     margin: 50px 0 0 0;
+    .box {
+        width: 90%;
+        margin: 0 auto;
+        padding: 10px;
+        border-radius: $Raduis;
+        backdrop-filter: blur(30px);
+        background-color: #fff;
+    }
 }
 
 .content-Center {

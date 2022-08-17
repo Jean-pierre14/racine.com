@@ -26,6 +26,17 @@ body {
 
 .wrapper {
   max-width: 1440px;
+  height: calc(100vh - 50px);
+  margin: 50px 0 0 0;
+}
+.wrapper .box {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 0.4rem;
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  background-color: #fff;
 }
 
 .content-Center {
