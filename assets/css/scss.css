@@ -25,9 +25,10 @@ body {
 }
 
 .wrapper {
+  width: 98%;
   max-width: 1440px;
   height: calc(100vh - 50px);
-  margin: 50px 0 0 0;
+  margin: 50px auto;
 }
 .wrapper .box {
   width: 90%;
@@ -37,6 +38,12 @@ body {
   -webkit-backdrop-filter: blur(30px);
           backdrop-filter: blur(30px);
   background-color: #fff;
+}
+.wrapper .box p {
+  line-height: 1.1;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .content-Center {
