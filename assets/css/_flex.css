@@ -1,0 +1,16 @@
+.flex {
+  display: flex;
+  width: 100%;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-item-center {
+  align-items: center;
+}
+
+.img-fluid {
+  width: 100%;
+}
