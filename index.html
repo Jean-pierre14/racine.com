@@ -46,46 +46,48 @@
     <div class="container-fluid margin--top">
         <div class="main">
             <div class="Side-Left">
-                <div class="Search-Box">
-                    <form action="#" method="get" class="">
-                        <input type="text" placeholder="Search..." class="search-form">
-                    </form>
+                <div class="position-fixed">
+                    <div class="Search-Box">
+                        <form action="#" method="get" class="">
+                            <input type="text" placeholder="Search..." class="search-form">
+                        </form>
+                    </div>
+                    <ul class="Gr-List" id="Datas-users">
+                        <li>
+                            <a href="#user=uniqueId">
+                                <span>
+                                    <img src="./assets/img/undraw_teaching_f-1-cm.svg" alt="Friends img" class="img-profil" />
+                                </span>
+                                <span>Javascript Code</span>
+                                <span>
+                                    Yellow button
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#user=uniqueId">
+                                <span>
+                                    <img src="./assets/img/racine14.jpg" alt="Friends img" class="img-profil" />
+                                </span>
+                                <span>Code first</span>
+                                <span>
+                                    green button
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#user=uniqueId">
+                                <span>
+                                    <img src="./assets/img/racine14.jpg" alt="Friends img" class="img-profil" />
+                                </span>
+                                <span>Grace El Bisimwa</span>
+                                <span>
+                                    green button
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="Gr-List" id="Datas-users">
-                    <li>
-                        <a href="#user=uniqueId">
-                            <span>
-                                <img src="./assets/img/undraw_teaching_f-1-cm.svg" alt="Friends img" class="img-profil" />
-                            </span>
-                            <span>Grace El Bisimwa</span>
-                            <span>
-                                green button
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#user=uniqueId">
-                            <span>
-                                <img src="./assets/img/racine14.jpg" alt="Friends img" class="img-profil" />
-                            </span>
-                            <span>Grace El Bisimwa</span>
-                            <span>
-                                green button
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#user=uniqueId">
-                            <span>
-                                <img src="./assets/img/racine14.jpg" alt="Friends img" class="img-profil" />
-                            </span>
-                            <span>Grace El Bisimwa</span>
-                            <span>
-                                green button
-                            </span>
-                        </a>
-                    </li>
-                </ul>
             </div>
             <div class="Side-Center">
                 <div id="Datas-Center">
@@ -250,9 +252,13 @@
 
             </div>
             <div class="Side-Right">
-                <div class="Side-Right-Wrapper">
-                    <div id="map"></div>
-                    <div id="Datas-comments"></div>
+                <div class="position-fixed">
+                    <div class="Side-Right-Wrapper">
+                        <div id="map"></div>
+                        <div id="Datas-comments">
+                            <!-- Getting data from APIs -->
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
