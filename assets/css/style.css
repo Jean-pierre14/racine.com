@@ -28,8 +28,13 @@
     display: flex;
 }
 
-.justify-content-between {
+.flex.justify-content-between {
     justify-content: space-between;
+}
+
+.flex>div {
+    width: 100%;
+    padding: 10px 20px;
 }
 
 .list-items {

@@ -48,6 +48,42 @@ $padding: 10px;
     }
 }
 
+.element-2 {
+    padding: 0 20px;
+    h3 {
+        font-size: 40px;
+        font-weight: 600;
+        font-family: Roboto, sans-serif;
+    }
+}
+
+.items {
+    position: relative;
+    width: 90%;
+    margin: 30px auto;
+    border-radius: .8rem;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.442);
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    &>span {
+        border-right: .6px solid #ccc;
+        &:last-child {
+            border-right: 0;
+        }
+        &:first-child {
+            border-left: 0px;
+        }
+        position: relative;
+        width: 100%;
+        padding: 2rem;
+        a {
+            display: block;
+        }
+    }
+}
+
 .content-Center {
     padding: 10px 0;
     position: relative;
