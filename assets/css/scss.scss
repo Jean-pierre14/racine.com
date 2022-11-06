@@ -80,6 +80,23 @@ $padding: 10px;
         padding: 2rem;
         a {
             display: block;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            &>span {
+                display: none;
+                // display: block;
+                background-color: #ccc;
+                border-radius: .4em;
+                padding: 10px 15px;
+                font-size: 11px;
+            }
+            &:hover>span {
+                display: none;
+            }
+            i {
+                font-size: 30px;
+            }
         }
     }
 }

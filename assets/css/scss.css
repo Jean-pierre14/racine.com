@@ -97,6 +97,22 @@ body {
 }
 .items > span a {
   display: block;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.items > span a > span {
+  display: none;
+  background-color: #ccc;
+  border-radius: 0.4em;
+  padding: 10px 15px;
+  font-size: 11px;
+}
+.items > span a:hover > span {
+  display: none;
+}
+.items > span a i {
+  font-size: 30px;
 }
 
 .content-Center {
