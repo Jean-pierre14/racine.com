@@ -3,14 +3,30 @@
   width: 100%;
 }
 
-.justify-content-between {
+.flex.justify-content-between {
   justify-content: space-between;
 }
 
-.align-item-center {
+.flex.align-item-center {
   align-items: center;
 }
 
 .img-fluid {
   width: 100%;
+}
+
+@media (max-width: 660px) {
+  * {
+    font-family: Roboto, sans sans-serif;
+  }
+  .flex {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .flex:nth-child(1) {
+    grid-column: 2;
+  }
+  .flex:nth-child(2) {
+    grid-column: 1;
+  }
 }
