@@ -482,13 +482,36 @@ table {
 
 .grid-2 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2em;
     margin: 2rem auto;
+    border-radius: .4rem;
+    padding: 2rem;
+    &.white {
+        background-color: #fff;
+    }
     video {
         width: 100%;
         border-radius: .4rem;
         background-color: rgba(17, 17, 17, 0.408);
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        text-align: center;
+    }
+    @media(max-width: 760px) {
+        & {
+            display: grid;
+            grid-template-columns: 1fr;
+            width: 90%;
+            padding: 1rem;
+            margin: 10px auto;
+        }
     }
 }
 

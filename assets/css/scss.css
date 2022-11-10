@@ -510,14 +510,37 @@ table {
 
 .grid-2 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2em;
   margin: 2rem auto;
+  border-radius: 0.4rem;
+  padding: 2rem;
+}
+.grid-2.white {
+  background-color: #fff;
 }
 .grid-2 video {
   width: 100%;
   border-radius: 0.4rem;
   background-color: rgba(17, 17, 17, 0.408);
+}
+.grid-2 h1,
+.grid-2 h2,
+.grid-2 h3,
+.grid-2 h4,
+.grid-2 h5,
+.grid-2 h6 {
+  text-align: center;
+}
+@media (max-width: 760px) {
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 90%;
+    padding: 1rem;
+    margin: 10px auto;
+  }
 }
 
 .container-dashboard {
