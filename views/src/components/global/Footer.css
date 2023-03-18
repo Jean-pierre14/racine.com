@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.footer {
+  position: relative;
+  font-family: Roboto, sans-serif;
+  min-height: 200px;
+  width: 100%;
+  padding: 50px 100px;
+  background-color: black;
+  color: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-content: center;
+  align-items: start;
+}
+
+.element-1.one {
+  color: #ccc;
+}
+.element-1.two {
+  color: lightpink;
+}
+.element-1.tree {
+  color: linen;
+}

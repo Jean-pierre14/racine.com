@@ -5,17 +5,17 @@ let output = "";
 const paragraph = document.getElementById("Datas");
 
 if (paragraph) {
-    paragraph.innerHTML = "Loading...";
+  paragraph.innerHTML = "Loading...";
 }
 
 fetch("https://jsonplaceholder.typicode.com/todos")
-    .then((response) => response.json())
-    .then((json) => {
-        if (json.length > 0) {
-            // console.log(JSON.stringify(json))
-            let output = "";
-            json.forEach((u) => {
-                output += `
+  .then((response) => response.json())
+  .then((json) => {
+    if (json.length > 0) {
+      // console.log(JSON.stringify(json))
+      let output = "";
+      json.forEach((u) => {
+        output += `
                 <div class="Card">
                   <div class="Card-Header">
                     <h3 class="d-flex justify-content-between">Username <a href="#${u.userId}">${u.id}</a></h3>
@@ -28,27 +28,27 @@ fetch("https://jsonplaceholder.typicode.com/todos")
                   </div>
                 </div>
             `;
-            });
-            if ((paragraph.innerHTML = "")) {
-                paragraph.innerHTML = "Loading";
-            } else {
-                paragraph.innerHTML = output;
-            }
-        } else {
-            console.log("No data");
-        }
-    });
+      });
+      if ((paragraph.innerHTML = "")) {
+        paragraph.innerHTML = "Loading...";
+      } else {
+        paragraph.innerHTML = output;
+      }
+    } else {
+      console.log("No data");
+    }
+  });
 
 // Fetch users using the fake jsonplaceholder api
 const UsersDom = document.getElementById("Datas-users");
 let data = "Loading...";
 fetch("https://jsonplaceholder.typicode.com/users")
-    .then((res) => res.json())
-    .then((json) => {
-        if (json.length > 0) {
-            data = "";
-            json.forEach((user) => {
-                data += `
+  .then((res) => res.json())
+  .then((json) => {
+    if (json.length > 0) {
+      data = "";
+      json.forEach((user) => {
+        data += `
                 <li>
                   <a href="user.html?get=${user.id}">
                       <span>
@@ -58,28 +58,28 @@ fetch("https://jsonplaceholder.typicode.com/users")
                   </a>
               </li>
               `;
-            });
-        } else {
-            data = '<p class="info danger">There no data</p>';
-        }
-        UsersDom.innerHTML = data;
-    })
-    .catch((e) => {
-        UsersDom.innerHTML = `<p class="ErrorNet">Networking...</p>`;
-        console.log(e);
-    });
+      });
+    } else {
+      data = '<p class="info danger">There no data</p>';
+    }
+    UsersDom.innerHTML = data;
+  })
+  .catch((e) => {
+    UsersDom.innerHTML = `<p class="ErrorNet">Networking...</p>`;
+    console.log(e);
+  });
 
 // To Get the params using javascript
 function User() {
-    let UrlString = window.location.href;
-    let url = new URL(UrlString);
-    let getData = url.searchParams.get("get");
-    // alert(getData)
+  let UrlString = window.location.href;
+  let url = new URL(UrlString);
+  let getData = url.searchParams.get("get");
+  // alert(getData)
 
-    fetch(`https://jsonplaceholder.typicode.com/users/${getData}`)
-        .then((res) => res.json())
-        .then((json) => {
-            data = `
+  fetch(`https://jsonplaceholder.typicode.com/users/${getData}`)
+    .then((res) => res.json())
+    .then((json) => {
+      data = `
         <div class="Card">
           <div class="Card-Header">
             <h2>${json.name}</h2>
@@ -137,8 +137,8 @@ function User() {
           </div>
         </div>
       `;
-            let Details = "";
-            Details = `
+      let Details = "";
+      Details = `
         <div class="Card">
           <div class="Card-Header">
             <h3>Campany: ${
@@ -166,16 +166,16 @@ function User() {
           <div class="Card-Body"></div>
         </div>
       `;
-            document.getElementById("Datas-user-Details").innerHTML = Details;
-            document.getElementById("Datas-user").innerHTML = data;
-            // console.log(data)
-        })
-        .catch((e) => {
-            document.getElementById(
-                "Datas-user"
-            ).innerHTML = `<p class="ErrorNet">Loading...</p>`;
-            console.log(e);
-        });
+      document.getElementById("Datas-user-Details").innerHTML = Details;
+      document.getElementById("Datas-user").innerHTML = data;
+      // console.log(data)
+    })
+    .catch((e) => {
+      document.getElementById(
+        "Datas-user"
+      ).innerHTML = `<p class="ErrorNet">Loading...</p>`;
+      console.log(e);
+    });
 }
 
 User();
