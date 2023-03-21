@@ -4,6 +4,9 @@ const Contact = () => {
   return (
     <>
       <div className="form">
+        <div className="error">
+          <p>Error is here</p>
+        </div>
         <div className="group">
           <label htmlFor="email">Email</label>
           <input

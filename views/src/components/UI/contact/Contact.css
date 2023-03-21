@@ -20,6 +20,15 @@
 .group label {
   margin: 10px 0;
 }
+.error {
+  padding: 20px;
+  border: 2px solid tomato;
+  border-radius: 0.4rem;
+  background-color: rgba(255, 99, 71, 0.371);
+  color: tomato;
+  display: block;
+  width: 100%;
+}
 .button {
   padding: 10px 20px;
   border: none;
@@ -29,6 +38,7 @@
   cursor: pointer;
   border-radius: 0.4rem;
   font-size: 14px;
+  font-weight: 700;
   font-family: Roboto, sans-serif;
 }
 textarea.input {
