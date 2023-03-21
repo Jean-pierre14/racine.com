@@ -1,0 +1,40 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: rgba(240, 248, 255, 0.33);
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.33);
+  border-radius: 0 0 1rem 1rem;
+  padding: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header .nav {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .nav ul {
+  position: relative;
+  list-style: none;
+}
+.header .nav ul li {
+  display: inline-block;
+  background: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.header .nav ul li:hover {
+  opacity: 0.5;
+}
+
+.header .nav ul li:first-child {
+  border-radius: 0.4rem 0 0 0.4rem;
+}
+.header .nav ul li:last-child {
+  border-radius: 0 0.4rem 0.4rem 0;
+}

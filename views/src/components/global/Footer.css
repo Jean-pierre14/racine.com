@@ -13,8 +13,7 @@
   margin: 20px 0;
 }
 .footer {
-  position: absolute;
-  bottom: 0;
+  position: relative;
   font-family: Roboto, sans-serif;
   min-height: 200px;
   width: 100%;
@@ -29,6 +28,19 @@
   gap: 2rem;
   justify-content: center;
   align-items: start;
+}
+
+@media (max-width: 760px) {
+  .footer {
+    width: 100%;
+    padding: 100px 20px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .element-1.one {
