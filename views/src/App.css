@@ -10,3 +10,13 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.card {
+  color: #fff;
+  background-color: black;
+  border-radius: 0.4rem;
+  padding: 10px;
+  margin: 10px 0;
+  text-align: left;
+  font-family: Roboto, "sans-serif";
+}
