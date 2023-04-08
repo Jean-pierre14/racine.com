@@ -1,0 +1,19 @@
+{
+  "navLinks": [
+    {
+      "id": "123",
+      "name": "Home",
+      "path": "/"
+    },
+    {
+      "id": "13",
+      "name": "Profile",
+      "path": "/profile"
+    },
+    {
+      "id": "133",
+      "name": "Contact",
+      "path": "/Contact"
+    }
+  ]
+}
