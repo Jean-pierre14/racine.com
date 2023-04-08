@@ -3,10 +3,11 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 const Main = () => {
-  const [datas, setDatas] = useState([]);
+  const [data, setData] = useState([]);
 
   const GetAllPost = () => {
-    const Url = "https://jsonplaceholder.typicode.com/posts";
+    // setDatas(["Loading"]);
+    const Url = "https://jsonplaceholder.typicode.com/posts?limit=10";
     axios
       .get(Url)
       .then((response) => {
@@ -17,7 +18,7 @@ const Main = () => {
           alert(message, status);
         } else {
           console.log(data);
-          setDatas(data);
+          setData(data);
         }
       })
       .catch((err) => console.log(err));
@@ -28,7 +29,7 @@ const Main = () => {
   }, []);
   return (
     <div className="container main">
-      {datas.map(({ userId, id, title, body }) => {
+      {data.map(({ userId, id, title, body }) => {
         return (
           <div className="card card-body" key={id}>
             <h2>{title}</h2>
