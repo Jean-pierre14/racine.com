@@ -1,11 +1,11 @@
 import Header from "./components/global/Header";
+import Home from "./components/home/Home";
 
 function App() {
   return (
     <>
-      <div className="container">
-        <Header />
-      </div>
+      <Header />
+      <Home />
     </>
   );
 }

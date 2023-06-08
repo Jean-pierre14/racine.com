@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #000;
+}
+.brand {
+  cursor: pointer;
+}
+.Color {
+  padding: 10px 5px;
+  background-color: #ed23;
+  border-radius: 0.4rem;
+}
+.NavbarHeader {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  padding: 20px 10px;
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Links {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.NavbarHeader .Links a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 0.4rem;
+  margin-left: 10px;
+  transition: all ease 0.3s;
+}
+.NavbarHeader .Links a:hover {
+  background-color: #ed23;
+}
