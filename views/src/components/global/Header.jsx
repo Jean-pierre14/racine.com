@@ -1,21 +1,24 @@
-import "./Header.css";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
 
-const Header = () => {
+function Header() {
   return (
-    <>
-      <nav className="NavbarHeader">
-        <div>
-          <div className="brand">
-            Racine14<span className="Color">Creator</span>
-          </div>
-        </div>
-        <div className="Links">
-          <a href="#">Login</a>
-          <a href="#">Register</a>
-        </div>
-      </nav>
-    </>
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Container>
+        <Navbar.Brand href="#home">Racine14Creator</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto"></Nav>
+          <Nav>
+            <Nav.Link href="#features">Login</Nav.Link>
+            <Nav.Link href="#pricing">Register</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
-};
+}
 
 export default Header;

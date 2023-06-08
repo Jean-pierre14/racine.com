@@ -9,11 +9,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
     "boostrap": "^2.0.0",
     "bootstrap": "^5.3.0",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
-    "react-icon": "^1.0.0"
+    "react-icon": "^1.0.0",
+    "react-icons": "^4.9.0",
+    "react-redux": "^8.0.7",
+    "react-router-bootstrap": "^0.26.2",
+    "redux": "^4.2.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
