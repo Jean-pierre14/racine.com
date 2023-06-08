@@ -16,7 +16,7 @@ const Home = () => {
             </a>
           </div>
           <div className="col-md-5 col-sm-12 col-lg-4 d-flex justify-content-center align-items-center">
-            <img src="/public/Portfolio.png" alt="" className="img-fluid" />
+            <img src="/Portfolio.png" alt="" className="img-fluid" />
           </div>
         </div>
       </div>

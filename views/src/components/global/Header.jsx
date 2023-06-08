@@ -1,7 +1,14 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import { Link } from "react-router-dom";
+
+const NavLinks = [
+  { id: 1, path: "/", element: "Home" },
+  { id: 2, path: "/contact", element: "Contact Us" },
+  { id: 3, path: "/login", element: "Login" },
+  { id: 4, path: "/register", element: "Register" },
+];
 
 function Header() {
   return (
@@ -12,8 +19,17 @@ function Header() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto"></Nav>
           <Nav>
-            <Nav.Link href="#features">Login</Nav.Link>
-            <Nav.Link href="#pricing">Register</Nav.Link>
+            {NavLinks.map((item) => (
+              <Nav.Link>
+                <Link
+                  style={{ textDecoration: "none", color: "#fff" }}
+                  key={item.id}
+                  to={item.path}
+                >
+                  {item.element}
+                </Link>
+              </Nav.Link>
+            ))}
           </Nav>
         </Navbar.Collapse>
       </Container>
