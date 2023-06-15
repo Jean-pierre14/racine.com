@@ -10,6 +10,8 @@ const languges = [
   { id: 9, name: "Jquery", path: "" },
   { id: 10, name: "Axios", path: "" },
 ];
+import { Link } from "react-router-dom";
+
 const Home = () => {
   return (
     <>
@@ -21,18 +23,28 @@ const Home = () => {
             </h1>
             <h2 className="text-left text-lg display-2">Front End Developer</h2>
             <ul
-              className="d-flex flex-wrap text-decoration-none"
+              className="my-2 d-flex flex-wrap text-decoration-none"
               style={{ listStyle: "none", margin: 0, padding: 0 }}
             >
               {languges.map((item) => (
-                <li style={{ marginRight: "10px" }} key={item.id}>
+                <li
+                  style={{
+                    marginRight: "10px",
+                    borderRadius: ".4rem",
+                    padding: "10px",
+                    cursor: "pointer",
+                    background: "#000",
+                    color: "#fff",
+                  }}
+                  key={item.id}
+                >
                   {item.name}
                 </li>
               ))}
             </ul>
-            <a href="" target="_blank" className="btn btn-lg btn-primary">
+            <Link to="" target="_blank" className="btn btn-lg btn-primary">
               Github Account
-            </a>
+            </Link>
           </div>
           <div className="col-md-5 col-sm-12 col-lg-4 d-flex justify-content-center align-items-center">
             <img src="/Portfolio.png" alt="" className="img-fluid" />
