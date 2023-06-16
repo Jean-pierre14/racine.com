@@ -1,5 +1,5 @@
-const languges = [
-  { id: 1, name: "HTML", path: "" },
+const language = [
+  { id: 1, name: "HTML", path: "", icon: "" },
   { id: 2, name: "CSS", path: "" },
   { id: 3, name: "Bootstrap", path: "" },
   { id: 4, name: "TailwindCss", path: "" },
@@ -26,7 +26,7 @@ const Home = () => {
               className="my-2 d-flex flex-wrap text-decoration-none"
               style={{ listStyle: "none", margin: 0, padding: 0 }}
             >
-              {languges.map((item) => (
+              {language.map((item) => (
                 <li
                   style={{
                     marginRight: "10px",
@@ -42,7 +42,11 @@ const Home = () => {
                 </li>
               ))}
             </ul>
-            <Link to="" target="_blank" className="btn btn-lg btn-primary">
+            <Link
+              to="https://github.com/jean-pierre14"
+              target="_blank"
+              className="btn btn-lg btn-primary"
+            >
               Github Account
             </Link>
           </div>
