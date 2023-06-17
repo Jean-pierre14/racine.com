@@ -11,17 +11,30 @@ const language = [
   { id: 10, name: "Axios", path: "" },
 ];
 import { Link } from "react-router-dom";
+import AOS from "aos";
+
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Home = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <>
       <div className="container">
         <div className="row py-5 d-flex justify-content-center align-items-center">
           <div className="col-md-7 col-sm-12 col-lg-8">
-            <h1 className="text-left text-bold text-lg display-1">
+            <h1
+              className="text-left text-bold text-lg display-1"
+              data-aos="zoom-in"
+            >
               Bisimwa Grace
             </h1>
-            <h2 className="text-left text-lg display-2">Front End Developer</h2>
+            <h2 className="text-left display-2" data-aos="fade-up">
+              Front End Developer
+            </h2>
             <ul
               className="my-2 d-flex flex-wrap text-decoration-none"
               style={{ listStyle: "none", margin: 0, padding: 0 }}
@@ -37,6 +50,8 @@ const Home = () => {
                     color: "#fff",
                   }}
                   key={item.id}
+                  className="my-1"
+                  data-aos="flip-left"
                 >
                   {item.name}
                 </li>
@@ -51,7 +66,12 @@ const Home = () => {
             </Link>
           </div>
           <div className="col-md-5 col-sm-12 col-lg-4 d-flex justify-content-center align-items-center">
-            <img src="/Portfolio.png" alt="" className="img-fluid" />
+            <img
+              src="/Portfolio.png"
+              alt=""
+              className="img-fluid"
+              data-aos="fade-up"
+            />
           </div>
         </div>
       </div>
