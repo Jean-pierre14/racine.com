@@ -10,11 +10,14 @@ const language = [
   { id: 9, name: "Jquery", path: "" },
   { id: 10, name: "Axios", path: "" },
 ];
+import styles from "./Home.module.css";
+
 import { Link } from "react-router-dom";
 import AOS from "aos";
 
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import Skills from "../Skills/Skills";
 
 const Home = () => {
   useEffect(() => {
@@ -72,6 +75,27 @@ const Home = () => {
               className="img-fluid"
               data-aos="fade-up"
             />
+          </div>
+        </div>
+      </div>
+      <div className="container-fluid bg-dark py-5">
+        <div className="container py-5">
+          <div className="row py-5 d-flex justify-content-center align-items-center">
+            <div className="cl-md-12 py-5">
+              <h2 className="text-center text-white">Skills</h2>
+            </div>
+            <div className="col-md-6" data-aos="fade-up">
+              <img
+                src="/assets/img/brain-xray102221.jpg"
+                alt="Brain"
+                className="img-fluid"
+              />
+            </div>
+            <div className="col-md-6">
+              <ul className={styles.list}>
+                <Skills />
+              </ul>
+            </div>
           </div>
         </div>
       </div>
