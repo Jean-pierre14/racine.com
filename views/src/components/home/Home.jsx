@@ -38,6 +38,7 @@ const Home = () => {
             <h2 className="text-left display-2" data-aos="fade-up">
               Front End Developer
             </h2>
+            <p>I am a congolese from DRC. Webmaster and graphic designer</p>
             <ul
               className="my-2 d-flex flex-wrap text-decoration-none"
               style={{ listStyle: "none", margin: 0, padding: 0 }}
