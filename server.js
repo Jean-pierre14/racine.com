@@ -1,15 +1,32 @@
-const exp = require("express"),
-  { success, error } = require("consola"),
-  cors = require("cors");
-const app = exp(),
-  PORT = process.env.PORT || 7000;
+import express from "express";
+import dotenv from "dotenv";
+import cors from "cors";
 
-// Middlewares
+dotenv.config({ path: ".env" });
+
+const app = express(),
+  PORT = process.env.PORT || 5001;
+
 app.use(cors());
-app.use("/", require("./routers/index"));
-app.use("/suscribe", require("./routers/Suscribes"));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.listen(PORT, (e) => {
-  if (e) error({ message: `${e}`, badge: true });
-  success({ message: `Server run on port ${PORT}`, badge: true });
+// Engine
+app.set("view engine", "ejs");
+
+// Static file
+app.use("/assets", express.static("public"));
+
+app.get("/", (req, res) => {
+  res.render("index");
 });
+
+const Server = () => {
+  app.listen(PORT, (error) => {
+    if (error) throw error;
+    console.log(`Server run on PORT: http://localhost:${PORT}`);
+  });
+};
+
+// Run the server function
+Server();
