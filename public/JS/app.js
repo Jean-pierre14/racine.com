@@ -14,7 +14,8 @@ particlesJS(
         value: "#ffffff",
       },
       shape: {
-        type: ["circle", "triangle", "star", "image"],
+        // type: ["circle", "triangle", "star", "image"],
+        type: "circle",
         stroke: {
           width: 0,
           color: "#000000",
