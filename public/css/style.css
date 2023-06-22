@@ -25,3 +25,12 @@
   background: #fff;
   padding: 10px;
 }
+.canva {
+  position: absolute;
+  top: 0;
+  left: -25px;
+  border-radius: 10px 20px 0 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #fc5800d4;
+}
