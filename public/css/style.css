@@ -27,8 +27,8 @@
 }
 .canva {
   position: absolute;
-  top: 0;
-  left: -25px;
+  top: -48px;
+  left: -20px;
   border-radius: 10px 20px 0 20px;
   width: 50px;
   height: 50px;
